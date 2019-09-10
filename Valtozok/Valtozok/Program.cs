@@ -47,7 +47,22 @@ namespace Valtozok
 
             Console.WriteLine($"Float:{egyszeres}, Double:{ketszeres}, Decimal:{dec}");
             //a változó értékének kiíratása
-            Console.WriteLine(szam);
+
+            //változó deklaráció a var kulccszóval
+            var kellEgyValtozo = 35.664456346;
+
+            //Szöveg típus
+
+            String szoveg = "Valami Szöveg";
+
+            Console.WriteLine(szoveg);
+
+            //Karakteres típus
+            Char karakter = 'a';
+
+            //logikai
+            Boolean logikai = true;
+            Boolean logikai2 = false;
 
             Console.ReadKey();
         }

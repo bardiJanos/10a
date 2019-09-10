@@ -60,3 +60,14 @@ Mindez egy kiíró utasításba csomagolva:
 ```c#
 Console.WriteLine($"Int32 max:{Int32.MaxValue} Int32 min:{Int32.MinValue}");
 ```
+**Nem egész számokat tároló változó típusok:**
+
+ - float (egyszeres pontosságú, 32 bites)
+ - double (kétszeres pontosságú, 64 bites)
+ - decimal (decimális, 128 bites)
+
+```C#
+float egyszeres = 15.39445456466525443f;
+double ketszeres = 15.39445456466525443;
+decimal dec = 15.39445456466525443m;
+```
