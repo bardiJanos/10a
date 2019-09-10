@@ -71,3 +71,35 @@ float egyszeres = 15.39445456466525443f;
 double ketszeres = 15.39445456466525443;
 decimal dec = 15.39445456466525443m;
 ```
+
+**Deklarálás a VAR kulcsszóval**
+
+```C#
+ var kellEgyValtozo = 35.664456346;
+```
+Ebben az esetben a fordító automatikusan a megfelelő típust rendeli a változóhoz, amit a megadott érték alapján állapít meg.
+
+**Szöveg típus**
+
+Egy karakterláncot (szöveget) tárol.
+
+```C#
+String szoveg = "Valami Szöveg";
+```
+
+**Karakter típus**
+
+Egyetlen karaktert tud tárolni.
+```C#
+Char karakter = 'a';
+```
+
+**Logikai típus**
+
+Logikai értéket(igaz/hamis) tud tárolni.
+
+```C#
+Boolean logikai = true;
+bool logikai2 = false;
+```
+
