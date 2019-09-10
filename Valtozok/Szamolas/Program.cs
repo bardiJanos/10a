@@ -10,19 +10,19 @@ namespace Szamolas
     {
         static void Main(string[] args)
         {
-            int a, b, c = 0;
+            double a, b, c = 0;
 
             Console.Write("A:");
 
             //A Console.ReadLine() string típus olvas be!
-            a = Convert.ToInt32(Console.ReadLine());
+            a = Convert.ToDouble(Console.ReadLine());
 
             Console.Write("B:");
                         
-            b = Convert.ToInt32(Console.ReadLine());
+            b = Convert.ToDouble(Console.ReadLine());
 
             //c értékének megadása
-            c = a + b;
+            c = a / b;
 
             Console.WriteLine($"C:{c}");
 
