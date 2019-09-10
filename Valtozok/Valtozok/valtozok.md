@@ -37,3 +37,26 @@ oldalon lévő értéket
 ```C#
 szam = 117;
 ```
+**2019.09.10**
+
+**A változó a deklarációkor is kaphat értéket:**
+
+```C#
+int szam=12;
+```
+
+**Név konvenciók**
+
+ - a változó neve legyen kisbetűs
+ - ha több névből áll, akkor a szóhatáron lévő betű legyen nagybetűs pl.masikSzam
+ - ne kezdődjön számmal, vagy más írásjellel
+ - ne legyen benne ékezet
+
+**Változók maximális, minimális értéke**
+
+Az adott típus pl. **Int32** esetén az **Int32.MaxValue** illetve az **Int32.MinValue** értékekkel lehet megtudni, hogy a típus milyen határok között tud értékeket tárolni.
+
+Mindez egy kiíró utasításba csomagolva:
+```c#
+Console.WriteLine($"Int32 max:{Int32.MaxValue} Int32 min:{Int32.MinValue}");
+```

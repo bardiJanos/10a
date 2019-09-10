@@ -24,8 +24,16 @@ namespace Valtozok
 
             szam = 19;
 
-            //
+            //változóknak adjunk beszédes neveket
+            int masikSzam = 19;
 
+            masikSzam = 39;
+
+            short kisEgesz = 45;
+
+            long nagyEgesz = 55567;
+
+            Console.WriteLine($"Int32 max:{Int32.MaxValue} Int32 min:{Int32.MinValue}");
 
             //a változó értékének kiíratása
             Console.WriteLine(szam);
