@@ -35,6 +35,17 @@ namespace Valtozok
 
             Console.WriteLine($"Int32 max:{Int32.MaxValue} Int32 min:{Int32.MinValue}");
 
+            Console.WriteLine($"UInt32 max:{UInt32.MaxValue} UInt32 min:{UInt32.MinValue}");
+
+            //byte típus
+            byte bajt = 129;
+
+            //nem egész számok tárolása,deklaráció
+            float egyszeres = 15.39445456466525443f;
+            double ketszeres = 15.39445456466525443;
+            decimal dec = 15.39445456466525443m;
+
+            Console.WriteLine($"Float:{egyszeres}, Double:{ketszeres}, Decimal:{dec}");
             //a változó értékének kiíratása
             Console.WriteLine(szam);
 
