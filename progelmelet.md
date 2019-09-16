@@ -65,12 +65,12 @@ float nemEgesz32 = 105.1287697369263926392936936f;
 **kétszeres pontosságú, 64 bites**
 
 ```C#
-double nemEgsze64 = 105.1287697369263926392936936;
+double nemEgesz64 = 105.1287697369263926392936936;
 ```
 
-**decimális**
+**decimális, 128 bites**
 ```C#
-decimal nemEgesz64 = 105.1287697369263926392936936m;
+decimal nemEgesz128 = 105.1287697369263926392936936m;
 ```
 **Pénzügyi alkalmazások esetén (kerekítési problémák miatt) a decimal típust kell használni. Egyéb esetekre elég a float ill. a double.**
 
