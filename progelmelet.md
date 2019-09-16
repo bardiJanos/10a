@@ -34,4 +34,23 @@
    -ushort előjel nélküli 16 bit
    -ulong előjel nélküli 64 bit
   
-  
+## Deklarálás
+```C#
+int szam;
+int masikSzam = 12;
+uint eSzam = 34;
+short rovid = 3345;
+long hosszu = 2423445;
+Int32 szam32 = 23455;
+```
+
+## Min, max értékek kiíratása
+
+```c#
+Console.WriteLine($"Előjeles 16bit:min:{Int16.MinValue},max:{Int16.MaxValue}");
+Console.WriteLine($"Előjel nélküli 16bit:min:{UInt16.MinValue},max:{UInt16.MaxValue}");
+
+Console.WriteLine($"Előjeles 32bit:min:{Int32.MinValue},max:{Int32.MaxValue}");
+Console.WriteLine($"Előjel nélküli 32bit:min:{UInt32.MinValue},max:{UInt32.MaxValue}");
+```
+
