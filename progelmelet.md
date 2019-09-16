@@ -22,5 +22,16 @@
   - webalkalmazás
   - mobil alkalmazás (Android)
   
+ # Változó típuok
+ 
+ ## Érték típusok
+ 
+  ## Egész számok tárolása
+   - int előjeles 32 bit
+   - short előjeles 16 bit
+   - long előjeles 64 bit
+   -uint előjel nélküli 32 bit
+   -ushort előjel nélküli 16 bit
+   -ulong előjel nélküli 64 bit
   
   
