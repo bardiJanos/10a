@@ -86,6 +86,45 @@ decimal nemEgesz64 = 105.1287697369263926392936936m;
 String szoveg = "Csodálatos hétfő reggel..";
 ```
 
+**Egy string karaktereire egyenkét is lehet hivatkozni**
+pl. első karakterének kiíratása
+C#-ban az elemek számozása 0-val kezdődik!!!
+```C#
+Console.WriteLine(szoveg[0]);
+Console.WriteLine(szoveg[1]);
+```
+
+**Műveletek stringekkel**
+
+**Szöveg hossza:**
+```C#
+Console.WriteLine(szoveg.Length);
+```
+
+**Van a szoveg string-ben hétfő?**
+```C#
+Console.WriteLine(szoveg.Contains("hétfő"));
+```
+
+**ugyanaz, csak változóval**
+```C#
+string keresett = "Hétfő";
+Console.WriteLine(szoveg.Contains(keresett));
+Console.WriteLine(szoveg.StartsWith(keresett));
+```
+
+**Karakter cseréje a szövegben**
+```C#
+Console.WriteLine(szoveg.Replace('o','ö'));
+```
+
+**Szóközök eltüntetése**
+
+```C#
+Console.WriteLine(szoveg.Replace(" ",""));
+```
+
+
 **Karakter típus**
 ```C#            
 Char karakter = 'h';
