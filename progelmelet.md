@@ -72,4 +72,4 @@ double nemEgsze64 = 105.1287697369263926392936936;
 ```C#
 decimal nemEgesz64 = 105.1287697369263926392936936m;
 ```
-**Pénzügyi alkalmazások esetén (kerekítési problémák miatt) a decimal típust kell használni. Egyéb esetekre elég a float ill. a double.
+**Pénzügyi alkalmazások esetén (kerekítési problémák miatt) a decimal típust kell használni. Egyéb esetekre elég a float ill. a double.**
