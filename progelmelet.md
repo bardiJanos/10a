@@ -54,3 +54,22 @@ Console.WriteLine($"Előjeles 32bit:min:{Int32.MinValue},max:{Int32.MaxValue}");
 Console.WriteLine($"Előjel nélküli 32bit:min:{UInt32.MinValue},max:{UInt32.MaxValue}");
 ```
 
+## Tört számok (lebegőpontos) számok tárolása
+
+
+**egyszeres pontosságú, 32 bites**
+```C#
+float nemEgesz32 = 105.1287697369263926392936936f;
+```
+
+**kétszeres pontosságú, 64 bites**
+
+```C#
+double nemEgsze64 = 105.1287697369263926392936936;
+```
+
+**decimális**
+```C#
+decimal nemEgesz64 = 105.1287697369263926392936936m;
+```
+**Pénzügyi alkalmazások esetén (kerekítési problémák miatt) a decimal típust kell használni. Egyéb esetekre elég a float ill. a double.
