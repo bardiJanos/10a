@@ -123,7 +123,28 @@ Console.WriteLine(szoveg.Replace('o','ö'));
 ```C#
 Console.WriteLine(szoveg.Replace(" ",""));
 ```
+**Szövegrész kiemelése adott karakter pozíciótól**
+```c#
+Console.WriteLine(szoveg.Substring(3));
+```
 
+**adott karakter pozíciótól, a megadott darab karakter kiemelése**
+```c#
+Console.WriteLine(szoveg.Substring(3,5));
+```
+```c#
+string hetfo = szoveg.Substring(11,5);
+Console.WriteLine(hetfo);
+```
+            
+**kisbetűsre alakítás**
+```c#
+Console.WriteLine(szoveg.ToLower());
+```
+**nagybetűsre alakítás**
+```c#
+Console.WriteLine(szoveg.ToUpper());
+```
 
 **Karakter típus**
 ```C#            
