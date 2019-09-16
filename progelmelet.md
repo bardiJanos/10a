@@ -73,3 +73,20 @@ double nemEgsze64 = 105.1287697369263926392936936;
 decimal nemEgesz64 = 105.1287697369263926392936936m;
 ```
 **Pénzügyi alkalmazások esetén (kerekítési problémák miatt) a decimal típust kell használni. Egyéb esetekre elég a float ill. a double.**
+
+**Logikai típus (igaz/hamis)**
+```C#            
+ bool logikai;
+ logikai = true;
+ logikai = false;
+ ```
+
+ **Szöveg típus**
+```C# 
+String szoveg = "Csodálatos hétfő reggel..";
+```
+
+**Karakter típus**
+```C#            
+Char karakter = 'h';
+```
