@@ -37,3 +37,57 @@ for (int i = 0; i < szamok.Length; i++)
         Console.WriteLine(szamok[i]);
     }
 ```
+**Véletlen számok létrehozása, majd a tömb feltöltése ilyen számokkal**
+```C#
+  
+            Random rand = new Random();
+
+            for (int i = 0; i < szamok.Length; i++)
+            {
+                szamok[i] = rand.Next(1,101);
+            }
+```
+**Listázás, az elemek sorszámát is megjelenítjük**
+```C#
+for (int i = 0; i < szamok.Length; i++)
+            {
+                Console.WriteLine($"{i}:{szamok[i]}");
+            }
+```
+**Listázás elöltesztelő ciklussal**
+```C#
+
+var szamlalo = 0;
+while (szamlalo<szamok.Length)
+    {
+        Console.WriteLine($"{szamlalo}:{szamok[szamlalo]}");
+        szamlalo++;
+    }
+```
+
+**Visszafelé számoló for ciklus**
+```C#
+for (int i = szamok.Length-1; i>=0  ; i--)
+    {
+        Console.WriteLine($"{i}:{szamok[i]}");
+    }
+```
+
+**Kiíratás, eltérő színekkel jelöljük a pozitív és a negatív számokat**
+```C#
+for (int i = 0; i < szamok.Length; i++)
+            {
+                if (szamok[i]<0)
+                {
+                    Console.ForegroundColor = ConsoleColor.Red;
+                }
+
+                if (szamok[i]>0)
+                {
+                    Console.ForegroundColor = ConsoleColor.Green;
+                }
+                
+                Console.WriteLine($"{i}:{szamok[i]}");
+                Console.ResetColor();
+            }
+```
