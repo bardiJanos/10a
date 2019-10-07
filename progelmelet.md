@@ -150,3 +150,17 @@ Console.WriteLine(szoveg.ToUpper());
 ```C#            
 Char karakter = 'h';
 ```
+**Átalakítás a változó típusok között**
+
+String típusú változóban tárolt számok átalakítása integer-re.
+
+```C#
+string a = "15";
+string b = "26";
+
+int c = 0;
+
+//string értékek átalakítása int típusra
+c = Convert.ToInt32(a) + Convert.ToInt32(b);
+```            
+
