@@ -163,4 +163,21 @@ int c = 0;
 //string értékek átalakítása int típusra
 c = Convert.ToInt32(a) + Convert.ToInt32(b);
 ```            
+**Stringek összefűzése**
+```C#
+//ebben az esetben a két string össze lesz fűzve
+   var d = a + b;
+```
+**Típus kényszerítése**
+```C#
+int e = 29;
+int f = 119;
+double g = 345.26;
+//ITT g-re rákényszerítjük az int típust
+int osszeg = e + f + (int)g;
 
+g = e + f;
+            
+//típus kényszerítés itt is, más néven kasztolás
+f = (int)g + e;
+```
