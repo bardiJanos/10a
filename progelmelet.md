@@ -181,3 +181,8 @@ g = e + f;
 //típus kényszerítés itt is, más néven kasztolás
 f = (int)g + e;
 ```
+**Típus konverzió a típus PARSE() függvényével**
+
+```C#
+ g = Double.Parse("18,8") + Double.Parse("76,99");
+``` 
