@@ -61,6 +61,28 @@ namespace Elagazasok
                 Console.WriteLine("Nem nagyobb mint 10");
             }
 
+            //írjon szelekciót, amely egy számról
+            //megállapítja, hogy 1-es 10-es 100-as v. 1000-es
+            //nagyságrendű-e!
+            a = 10001;
+            if (a<10)
+            {
+                Console.WriteLine("Egyes");
+            }
+            else if (a/10<10)
+            {
+                Console.WriteLine("tízes");
+            }
+            else if (a/100<10)
+            {
+                Console.WriteLine("százas");
+            }
+            else 
+            {
+                Console.WriteLine("ezres");
+            }
+        
+
 
             Console.ReadKey();
         }
