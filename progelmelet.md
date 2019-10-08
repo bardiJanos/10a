@@ -150,3 +150,39 @@ Console.WriteLine(szoveg.ToUpper());
 ```C#            
 Char karakter = 'h';
 ```
+**Átalakítás a változó típusok között**
+
+String típusú változóban tárolt számok átalakítása integer-re.
+
+```C#
+string a = "15";
+string b = "26";
+
+int c = 0;
+
+//string értékek átalakítása int típusra
+c = Convert.ToInt32(a) + Convert.ToInt32(b);
+```            
+**Stringek összefűzése**
+```C#
+//ebben az esetben a két string össze lesz fűzve
+   var d = a + b;
+```
+**Típus kényszerítése**
+```C#
+int e = 29;
+int f = 119;
+double g = 345.26;
+//ITT g-re rákényszerítjük az int típust
+int osszeg = e + f + (int)g;
+
+g = e + f;
+            
+//típus kényszerítés itt is, más néven kasztolás
+f = (int)g + e;
+```
+**Típus konverzió a típus PARSE() függvényével**
+
+```C#
+ g = Double.Parse("18,8") + Double.Parse("76,99");
+``` 
