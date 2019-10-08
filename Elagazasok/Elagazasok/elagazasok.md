@@ -89,3 +89,21 @@ A fenti szelekció a feltételek megfogalmazása miatt sosem jut el az else if �
                 Console.WriteLine("Nem nagyobb mint 10");
             }
 ```
+**Többszörös szelekció, switch**
+Egy változó adott értéke esetén végrehajtandó tevékenységek végrehajtására. Ha nincs egyezés, akkod a default eset hajtódik végre.
+```C#
+ConsoleKey bill = ConsoleKey.DownArrow;
+
+            switch (bill)
+            {
+                case ConsoleKey.UpArrow:
+                    Console.WriteLine("Up");
+                    break;
+                case ConsoleKey.DownArrow:
+                    Console.WriteLine("Down");
+                    break;
+                default:
+                    Console.WriteLine(bill);
+                    break;
+            }
+```

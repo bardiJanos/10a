@@ -81,7 +81,37 @@ namespace Elagazasok
             {
                 Console.WriteLine("ezres");
             }
-        
+
+            int b = 2;
+
+            switch (b)
+            {
+                case 1:
+                    Console.WriteLine("b értéke 1");
+                    break;
+                case 2:
+                    Console.WriteLine("b most 2");
+                    break;
+                default:
+                    Console.WriteLine("Alapeset");
+                    break;
+            }
+
+            ConsoleKey bill = ConsoleKey.DownArrow;
+
+            switch (bill)
+            {
+                case ConsoleKey.UpArrow:
+                    Console.WriteLine("Up");
+                    break;
+                case ConsoleKey.DownArrow:
+                    Console.WriteLine("Down");
+                    break;
+                default:
+                    Console.WriteLine(bill);
+                    break;
+            }
+
 
 
             Console.ReadKey();
