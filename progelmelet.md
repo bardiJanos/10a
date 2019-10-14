@@ -136,7 +136,21 @@ Console.WriteLine(szoveg.Substring(3,5));
 string hetfo = szoveg.Substring(11,5);
 Console.WriteLine(hetfo);
 ```
+**Dátum feldolgozás substring-el**
+```c#
+var datum = "2019.10.14";
+
+//Az év kiemelése a datum változóból
+var ev = datum.Substring(0,4);
+
+//A hónap kiemelése a datum változóból
+var honap = datum.Substring(6, 2);
+
+//a nap kiemelése
+var nap = datum.Substring(9,2);
             
+```
+
 **kisbetűsre alakítás**
 ```c#
 Console.WriteLine(szoveg.ToLower());
