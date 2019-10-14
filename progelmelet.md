@@ -175,7 +175,37 @@ Console.WriteLine(datumElemek[2]);
 }
 ```
 
+**Feladat:Feladat:minden karaktert alakítsunk az ellenkező írásmódúra**
+ ```c#
+ string alakitando = "eZt KelLeNe áTalAKíTaNi";
+ ```
+ 
+**String változtatásához a stringet karakter tömbbé kell alakítani**
+```C#
+var chAtalakitando = alakitando.ToCharArray();
+```
+**Egy ciklus karakterenént végigmegy a tömbön, és a karaktert az ellenkező írásmódúra változtatja**
+```C#
+for (int i = 0; i < chAtalakitando.Length; i++)
+            {
+                if (Char.IsLower(chAtalakitando[i]))
+                {
+                    //Ha kisbetűs, nagybetűsre alakítjuk
+                    chAtalakitando[i] = Char.ToUpper(chAtalakitando[i]);
+                }
+                else 
+                {
+                    //Ha nagybetűs, akkor pedig kisbetűsre
+                    chAtalakitando[i] = Char.ToLower(chAtalakitando[i]);
+                }
+            }
+```
 
+**Végül a karaktertömböt visszaalakítjuk string-é**
+```c#
+alakitando = new string(chAtalakitando);
+Console.WriteLine(alakitando);
+```
 
 **kisbetűsre alakítás**
 ```c#
