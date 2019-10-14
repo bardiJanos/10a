@@ -150,6 +150,32 @@ var honap = datum.Substring(6, 2);
 var nap = datum.Substring(9,2);
             
 ```
+**dátum feldarabolása a Split-el**
+```c#
+//string felvágása
+
+var fontosDatum = "2019-12-12";
+
+//string darabolása adott karakter mentén
+var datumElemek = fontosDatum.Split('-');
+
+//a darabolás után egy tömböt kapunk, melynek
+//elemei tartalmazzák az egyes szövegeket
+// [0]    [1]  [2]
+//[2019],[12],[12]
+Console.WriteLine(datumElemek[0]);
+Console.WriteLine(datumElemek[1]);
+Console.WriteLine(datumElemek[2]);
+```
+**A tömb elemeinek kiírása ciklusban sokkal egyszerűbb**
+```C#
+  for (int i = 0; i < datumElemek.Length; i++)
+{
+ Console.WriteLine(datumElemek[i]);
+}
+```
+
+
 
 **kisbetűsre alakítás**
 ```c#
