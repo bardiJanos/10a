@@ -18,7 +18,7 @@ namespace WhileCiklus
             while (szam<=30)
             {
                 
-                if (szam==10)
+                if (szam==3)
                 {
                     //kilépés a ciklusból
                     break;

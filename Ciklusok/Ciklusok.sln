@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ForCiklus", "ForCiklus\ForC
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WhileCiklus", "WhileCiklus\WhileCiklus.csproj", "{1627854A-3505-4367-BAFE-8D7315CDE028}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DoWhile", "DoWhile\DoWhile.csproj", "{21257FD3-31FF-420E-9B94-8E65A62663FB}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{1627854A-3505-4367-BAFE-8D7315CDE028}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1627854A-3505-4367-BAFE-8D7315CDE028}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1627854A-3505-4367-BAFE-8D7315CDE028}.Release|Any CPU.Build.0 = Release|Any CPU
+		{21257FD3-31FF-420E-9B94-8E65A62663FB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{21257FD3-31FF-420E-9B94-8E65A62663FB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{21257FD3-31FF-420E-9B94-8E65A62663FB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{21257FD3-31FF-420E-9B94-8E65A62663FB}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
