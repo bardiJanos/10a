@@ -31,6 +31,9 @@ namespace DoWhile
 
             } while (szam<30); //amíg szam kisebb mint 30
 
+            //Házi feladat ennek a ciklusnak a lerajzolása
+            //folyamatábrával
+
             //egészítsük ki a ciklust azzal, hogy egy gomb
             //lenyomására a számláló nullázódjon ki!
             Console.ReadKey();
