@@ -11,10 +11,11 @@ namespace MinMax
         static void Main(string[] args)
         {
             //Minimum és maximum meghatározás
-            int[] szamok = new int[] {18,3,79,66,945,411 };
+            int[] szamok = new int[] {18,3,79,-66,945,411 };
             //olyan kezdőértéket állítunk be, aminél biztosan lesz
             //nagyobb
             int max = Int32.MinValue;
+            int min = Int32.MaxValue;
 
             for (int i = 0; i < szamok.Length; i++)
             {
@@ -22,10 +23,17 @@ namespace MinMax
                 {
                     max = szamok[i];
                 }
+                if (szamok[i]<min)
+                {
+                    min = szamok[i];
+                }
             }
 
             Console.WriteLine($"A maximum:{max}");
             Console.WriteLine($"Ellenőrzés:{szamok.Max()}");
+
+            Console.WriteLine($"A minimum:{min}");
+            Console.WriteLine($"Ellenőrzés:{szamok.Min()}");
 
             Console.ReadKey();
         }
