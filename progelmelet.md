@@ -1,6 +1,6 @@
 # Programozás elmélet 
 
-**Javasolt könyv:[https://reiteristvan.files.wordpress.com/2018/01/reiter-istvc3a1n-c-programozc3a1s-lc3a9pc3a9src591l-lc3a9pc3a9sre.pdf](Reiter féle C# könyv)**
+**Javasolt könyv:[https://reiteristvan.files.wordpress.com/2018/01/reiter-istvc3a1n-c-programozc3a1s-lc3a9pc3a9src591l-lc3a9pc3a9sre.pdf] (Reiter féle C# könyv)**
 
 ## Ebben a tanévben C# és JavaScript
 ---
