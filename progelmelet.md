@@ -343,3 +343,21 @@ pl. a ciklusváltozó értékét négyzetre emeljük és kiíratjuk
 
             Console.WriteLine("Az autó megállt");
 ```            
+
+**Hátultesztelő ciklus**
+
+Az előző példa hátultesztelő ciklussal.
+A hátultesztelő ciklus egyszer mindenféleképpen lefut, hiszen a ciklusmag utasításai a kilépési feltétel kiértékelése előtt vannak.
+
+```C#
+sebesseg = 120;
+sebessegCsokkenes = 15;
+
+do
+{
+  Console.WriteLine(sebesseg);
+  sebesseg = sebesseg - sebessegCsokkenes;
+  
+} while (sebesseg>0);
+
+```
