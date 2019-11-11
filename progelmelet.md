@@ -316,3 +316,15 @@ int valaszt = 2;
                     break;
             }
 ```            
+##Ciklusok (ismételt tevékenységek)
+
+**Növekményes (előírt lépésszámú)**
+**Pontosan tudjuk, hányszor hajtódik végre**
+pl. a ciklusváltozó értékét négyzetre emeljük és kiíratjuk
+```C#
+            for (int i = 0; i < 100; i++)
+            {
+                Console.WriteLine(Math.Pow(i,2));    
+            }
+```            
+
