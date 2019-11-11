@@ -328,4 +328,18 @@ pl. a ciklusváltozó értékét négyzetre emeljük és kiíratjuk
                 Console.WriteLine(Math.Pow(i,2));    
             }
 ```            
+**Elöltesztelő (while) ciklus**
 
+írjunk ciklust, ami minden lépésben csökkenti a jármű sebességét, amíg az meg nem áll
+```c#
+            int sebesseg = 120;
+            int sebessegCsokkenes = 10;
+
+            while (sebesseg>0)
+            {
+                Console.WriteLine(sebesseg);
+                sebesseg = sebesseg - sebessegCsokkenes;
+            }
+
+            Console.WriteLine("Az autó megállt");
+```            
