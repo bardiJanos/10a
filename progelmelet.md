@@ -271,7 +271,7 @@ if (szam>0)
 ```            
  **Egyszeres,kétágú**
  ```C#
- if (szam>0)
+ if (szam>=0)
  {
     Console.WriteLine("A szám pozitív!");
 } else
@@ -279,5 +279,18 @@ if (szam>0)
     Console.WriteLine("A szám negatív!");
 }
 ```
-
-
+**Többszörös szelekció**
+```c#
+            if (szam>0)
+            {
+                Console.WriteLine("A szám pozitív!");
+            }
+            else if (szam==0)
+            {
+                Console.WriteLine("A szám nulla!");
+            }
+            else
+            {
+                Console.WriteLine("A szám negatív!");
+            }
+```
