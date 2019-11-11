@@ -260,7 +260,7 @@ f = (int)g + e;
 ``` 
 # Vezérlési szerkezetek (elágazások, ciklusok)
 ## Elágazások
-**Egyszeres, egyágú
+**Egyszeres, egyágú**
 
 ```c#
 int szam = 12;
