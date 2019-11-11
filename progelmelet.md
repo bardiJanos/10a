@@ -281,18 +281,18 @@ if (szam>0)
 ```
 **Többszörös szelekció**
 ```c#
-            if (szam>0)
-            {
-                Console.WriteLine("A szám pozitív!");
-            }
-            else if (szam==0)
-            {
-                Console.WriteLine("A szám nulla!");
-            }
-            else
-            {
-                Console.WriteLine("A szám negatív!");
-            }
+if (szam>0)
+{
+  Console.WriteLine("A szám pozitív!");
+}
+else if (szam==0)
+{
+  Console.WriteLine("A szám nulla!");
+}
+else
+{
+  Console.WriteLine("A szám nulla!");
+}
 ```
 **Többszörös szelekció, switch**
 Esetek megkülönböztetésére szolgál, azonban az eseteknél nem lehet összehasonlításokat alkalmazni pl.<,>,==,!=,<=,>=
@@ -323,25 +323,25 @@ int valaszt = 2;
 
 pl. a ciklusváltozó értékét négyzetre emeljük és kiíratjuk
 ```C#
-            for (int i = 0; i < 100; i++)
-            {
-                Console.WriteLine(Math.Pow(i,2));    
-            }
+for (int i = 0; i < 100; i++)
+{
+   Console.WriteLine(Math.Pow(i,2));    
+}
 ```            
 **Elöltesztelő (while) ciklus**
 
 írjunk ciklust, ami minden lépésben csökkenti a jármű sebességét, amíg az meg nem áll
 ```c#
-            int sebesseg = 120;
-            int sebessegCsokkenes = 10;
+int sebesseg = 120;
+int sebessegCsokkenes = 10;
 
-            while (sebesseg>0)
-            {
-                Console.WriteLine(sebesseg);
-                sebesseg = sebesseg - sebessegCsokkenes;
-            }
+while (sebesseg>0)
+{
+   Console.WriteLine(sebesseg);
+   sebesseg = sebesseg - sebessegCsokkenes;
+}
 
-            Console.WriteLine("Az autó megállt");
+Console.WriteLine("Az autó megállt");
 ```            
 
 **Hátultesztelő ciklus**
