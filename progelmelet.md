@@ -258,3 +258,17 @@ f = (int)g + e;
 ```C#
  g = Double.Parse("18,8") + Double.Parse("76,99");
 ``` 
+# Vezérlési szerkezetek (elágazások, ciklusok)
+## Elágazások
+**Egyszeres, egyágú
+
+```c#
+int szam = 12;
+if (szam>0)
+{
+ Console.WriteLine("A szám pozitív!");
+}
+```            
+
+
+
