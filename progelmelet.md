@@ -294,3 +294,25 @@ if (szam>0)
                 Console.WriteLine("A szám negatív!");
             }
 ```
+**Többszörös szelekció, switch**
+Esetek megkülönböztetésére szolgál, azonban az eseteknél nem lehet összehasonlításokat alkalmazni pl.<,>,==,!=,<=,>=
+
+```C#
+int valaszt = 2;
+
+            switch (valaszt)
+            {
+                case 1:
+                    Console.WriteLine("1-es kiválasztva");
+                    break;
+                case 2:
+                    Console.WriteLine("2-es kiválasztva");
+                    break;
+                case 3:
+                    Console.WriteLine("3-as kiválasztva");
+                    break;
+                default:
+                    Console.WriteLine("Nincs kiválasztva semmi");
+                    break;
+            }
+```            
