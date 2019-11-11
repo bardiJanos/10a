@@ -269,6 +269,15 @@ if (szam>0)
  Console.WriteLine("A szám pozitív!");
 }
 ```            
-
+ **Egyszeres,kétágú**
+ ```C#
+ if (szam>0)
+ {
+    Console.WriteLine("A szám pozitív!");
+} else
+{
+    Console.WriteLine("A szám negatív!");
+}
+```
 
 
