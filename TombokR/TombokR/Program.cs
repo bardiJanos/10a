@@ -31,7 +31,26 @@ namespace TombokR
                 Console.WriteLine(szamok[i]);
             }
 
+            //Hány százaléka negatív a tömb elemeinek?
 
+            //Külön változóban gyűjtjük a negatív változók számát
+            int negativDb = 0;
+
+            for (int i = 0; i < szamok.Length; i++)
+            {
+                if (szamok[i]<0)
+                {
+                    //ha a tömb eleme kisebb mint 0, akkor a negatív
+                    //számok darabszámát tartalmazó változó értékét
+                    //1-el növeljük
+                    negativDb++;
+                }
+            }
+            //Típuskényszerítés: megváltoztatom az eredmény típusát
+            Console.WriteLine($"Negatív elemek aránya:{(double)negativDb/szamok.Length}");
+
+
+            Console.ReadKey();
         }
     }
 }
