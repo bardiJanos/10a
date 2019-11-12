@@ -47,7 +47,9 @@ namespace TombokR
                 }
             }
             //Típuskényszerítés: megváltoztatom az eredmény típusát
-            Console.WriteLine($"Negatív elemek aránya:{(double)negativDb/szamok.Length}");
+            Console.WriteLine($"Negatív elemek aránya:{(double)negativDb/szamok.Length*100} %");
+
+            //Határozzuk meg a pozitív elemek arányát, összegét, átlagát!
 
 
             Console.ReadKey();

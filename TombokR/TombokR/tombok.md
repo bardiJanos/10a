@@ -29,3 +29,28 @@ for (int i = 0; i < szamok.Length; i++)
 }
 ```
 
+Feladat: mennyi a negatív számok aránya?
+
+Kell egy változó, amelyben gyűjtjük a negatív értékek darabszámát
+```C#
+ int negativDb = 0;
+```
+Ciklussal végig kell menni a tömbön, egy elágazás segítségével csak a nullánál kisebb elemeket dolgozzuk fel
+```C#
+for (int i = 0; i < szamok.Length; i++)
+{
+    if (szamok[i]<0)
+        {
+            //ha a tömb eleme kisebb mint 0, akkor a negatív
+            //számok darabszámát tartalmazó változó értékét
+            //1-el növeljük
+            negativDb++;
+        }
+}
+```
+Kiíratjuk az eredményt. Mivel egész típusok esetén az eredmény 0 lenne a törtrész elvesztése miatt
+ezért a **(double)** típuskényszerítéssel megváltoztatjuk az eredmény típusát.
+
+```C#
+Console.WriteLine($"Negatív elemek aránya:{(double)negativDb/szamok.Length}");
+```
