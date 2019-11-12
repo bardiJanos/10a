@@ -258,3 +258,106 @@ f = (int)g + e;
 ```C#
  g = Double.Parse("18,8") + Double.Parse("76,99");
 ``` 
+# Vezérlési szerkezetek (elágazások, ciklusok)
+## Elágazások
+**Egyszeres, egyágú**
+
+```c#
+int szam = 12;
+if (szam>0)
+{
+ Console.WriteLine("A szám pozitív!");
+}
+```            
+ **Egyszeres,kétágú**
+ ```C#
+ if (szam>=0)
+ {
+    Console.WriteLine("A szám pozitív!");
+} else
+{
+    Console.WriteLine("A szám negatív!");
+}
+```
+**Többszörös szelekció**
+```c#
+if (szam>0)
+{
+  Console.WriteLine("A szám pozitív!");
+}
+else if (szam==0)
+{
+  Console.WriteLine("A szám nulla!");
+}
+else
+{
+  Console.WriteLine("A szám nulla!");
+}
+```
+**Többszörös szelekció, switch**
+Esetek megkülönböztetésére szolgál, azonban az eseteknél nem lehet összehasonlításokat alkalmazni pl.<,>,==,!=,<=,>=
+
+```C#
+int valaszt = 2;
+
+            switch (valaszt)
+            {
+                case 1:
+                    Console.WriteLine("1-es kiválasztva");
+                    break;
+                case 2:
+                    Console.WriteLine("2-es kiválasztva");
+                    break;
+                case 3:
+                    Console.WriteLine("3-as kiválasztva");
+                    break;
+                default:
+                    Console.WriteLine("Nincs kiválasztva semmi");
+                    break;
+            }
+```            
+##Ciklusok (ismételt tevékenységek)
+
+**Növekményes (előírt lépésszámú)**
+**Pontosan tudjuk, hányszor hajtódik végre**
+
+pl. a ciklusváltozó értékét négyzetre emeljük és kiíratjuk
+```C#
+for (int i = 0; i < 100; i++)
+{
+   Console.WriteLine(Math.Pow(i,2));    
+}
+```            
+**Elöltesztelő (while) ciklus**
+
+írjunk ciklust, ami minden lépésben csökkenti a jármű sebességét, amíg az meg nem áll
+```c#
+int sebesseg = 120;
+int sebessegCsokkenes = 10;
+
+while (sebesseg>0)
+{
+   Console.WriteLine(sebesseg);
+   sebesseg = sebesseg - sebessegCsokkenes;
+}
+
+Console.WriteLine("Az autó megállt");
+```            
+
+**Hátultesztelő ciklus**
+
+Az előző példa hátultesztelő ciklussal.
+A hátultesztelő ciklus egyszer mindenféleképpen lefut, hiszen a ciklusmag utasításai a kilépési feltétel kiértékelése előtt vannak.
+
+```C#
+sebesseg = 120;
+sebessegCsokkenes = 15;
+
+do
+{
+  Console.WriteLine(sebesseg);
+  sebesseg = sebesseg - sebessegCsokkenes;
+  
+} while (sebesseg>0);
+
+```
