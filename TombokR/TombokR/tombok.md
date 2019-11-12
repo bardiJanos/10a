@@ -29,7 +29,7 @@ for (int i = 0; i < szamok.Length; i++)
 }
 ```
 
-Feladat: mennyi a negatív számok aránya?
+**Feladat: mennyi a negatív számok aránya?**
 
 Kell egy változó, amelyben gyűjtjük a negatív értékek darabszámát
 ```C#
@@ -53,4 +53,22 @@ ezért a **(double)** típuskényszerítéssel megváltoztatjuk az eredmény tí
 
 ```C#
 Console.WriteLine($"Negatív elemek aránya:{(double)negativDb/szamok.Length}");
+```
+**A tömb pozitív elemeinek darabszáma, átlaga**
+
+```c#
+int pozitivDb = 0;
+int pozitivOsszeg = 0;
+
+for (int i = 0; i < szamok.Length; i++)
+{
+    if (szamok[i] >= 0)
+    {
+        pozitivDb++;
+        pozitivOsszeg = pozitivOsszeg + szamok[i];
+    }
+}
+
+Console.WriteLine($"Pozitív elemek aránya:{(double)pozitivDb / szamok.Length * 100} %");
+Console.WriteLine($"Pozitív elemek átlaga:{(double)pozitivOsszeg/pozitivDb}");
 ```

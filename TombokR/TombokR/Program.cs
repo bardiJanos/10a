@@ -50,7 +50,20 @@ namespace TombokR
             Console.WriteLine($"Negatív elemek aránya:{(double)negativDb/szamok.Length*100} %");
 
             //Határozzuk meg a pozitív elemek arányát, összegét, átlagát!
+            int pozitivDb = 0;
+            int pozitivOsszeg = 0;
 
+            for (int i = 0; i < szamok.Length; i++)
+            {
+                if (szamok[i] >= 0)
+                {
+                    pozitivDb++;
+                    pozitivOsszeg = pozitivOsszeg + szamok[i];
+                }
+            }
+
+            Console.WriteLine($"Pozitív elemek aránya:{(double)pozitivDb / szamok.Length * 100} %");
+            Console.WriteLine($"Pozitív elemek átlaga:{(double)pozitivOsszeg/pozitivDb}");
 
             Console.ReadKey();
         }
