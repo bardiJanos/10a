@@ -388,4 +388,20 @@ for (int i = 0; i < szamok.Length; i++)
 {
    osszeg = osszeg + szamok[i];
 }
+Console.WriteLine($"Az elemek összege:{osszeg}");
+```
+**Megszámlálás**
+Nagyon hasonlít az összegzéshez, de itt egy változó értékét 1-el növeljük.
+
+kell egy változó az összeg tárolására
+```C#
+int darabszam = 0;
+```
+Ciklussal végigmegyün a tömbön:
+```C#
+for (int i = 0; i < szamok.Length; i++)
+{
+   darabszam++
+}
+Console.WriteLine($"Az elemek darabszáma:{darabszam}");
 ```
