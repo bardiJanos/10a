@@ -372,3 +372,20 @@ do
  
  Jellemzően valamilyen adatszerkezet adatain vannak ezek a műveletek végrehajtva.
  
+ **Összegzés**
+ 
+ Összegezzük az alábbi tömb elemeit!
+ ```c#
+ int[] szamok = {1,19,216,-18,49,76,-8 };
+ ```
+kell egy változó az összeg tárolására
+```C#
+int osszeg = 0;
+```
+Ciklussal végigmegyün a tömbön:
+```C#
+for (int i = 0; i < szamok.Length; i++)
+{
+   osszeg = osszeg + szamok[i];
+}
+```
