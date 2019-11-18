@@ -382,7 +382,7 @@ kell egy változó az összeg tárolására
 ```C#
 int osszeg = 0;
 ```
-Ciklussal végigmegyün a tömbön:
+Ciklussal végigmegyünk a tömbön:
 ```C#
 for (int i = 0; i < szamok.Length; i++)
 {
@@ -397,11 +397,32 @@ kell egy változó az összeg tárolására
 ```C#
 int darabszam = 0;
 ```
-Ciklussal végigmegyün a tömbön:
+Ciklussal végigmegyünk a tömbön:
 ```C#
 for (int i = 0; i < szamok.Length; i++)
 {
    darabszam++
 }
 Console.WriteLine($"Az elemek darabszáma:{darabszam}");
+```
+**Minimum/maximum kiválasztás**
+
+A minimumot/maximumot tároló változók kezőértékének célszerű a tömb első elemét választani.
+```C#
+int min = szamok[0];
+int max = szamok[0];
+
+for (int i = 0; i < szamok.Length; i++)
+{
+ if (szamok[i]<min)
+   {
+      min = szamok[i];
+   }
+ if (szamok[i]>max)
+   {
+      max = szamok[i];
+   }
+}
+
+Console.WriteLine($"Min:{min},max:{max}");
 ```
