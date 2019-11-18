@@ -361,3 +361,14 @@ do
 } while (sebesseg>0);
 
 ```
+
+## Alapvető (elemi) algoritmusok
+
+ - összegzés
+ - megszámlálás
+ - minimum/maximum kiválasztás
+ - keresés
+ - rendezés
+ 
+ Jellemzően valamilyen adatszerkezet adatain vannak ezek a műveletek végrehajtva.
+ 
