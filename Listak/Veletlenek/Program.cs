@@ -18,8 +18,20 @@ namespace Veletlenek
             List<int> vszamok = new List<int>();
             Random rand = new Random();
 
+            for (int i = 0; i < rand.Next(50,101); i++)
+            {
+                vszamok.Add(rand.Next(-100, 201));
+            }
 
+            foreach (var i in vszamok)
+            {
+                Console.WriteLine(i);
+            }
 
+            Console.WriteLine();
+            Console.WriteLine(vszamok.Count);
+
+           
 
             Console.ReadKey();
         }
