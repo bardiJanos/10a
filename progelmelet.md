@@ -426,3 +426,4 @@ for (int i = 0; i < szamok.Length; i++)
 
 Console.WriteLine($"Min:{min},max:{max}");
 ```
+**Tömb elemeinek rendezése**
