@@ -427,3 +427,39 @@ for (int i = 0; i < szamok.Length; i++)
 Console.WriteLine($"Min:{min},max:{max}");
 ```
 **Tömb elemeinek rendezése**
+
+Adott az alábbi tömb:
+```C#
+int[] szamok = {8,3,129,76,19,47};
+```
+Szeretnénk a tömb elemeit értekeik szerint sorba rendezni. A rendezés során két ciklust kell használni.
+Össze kell hasonlítani a tömb két szomszédos elemét, és ha szüséges, akkor fel kell őket cserélni.
+
+```C#
+for (int i = 0; i < szamok.Length-1; i++)
+{
+             
+    for (int j = i+1; j < szamok.Length; j++)
+    {
+
+             //ha kell, akkor csere
+             if (szamok[i]>szamok[j])
+             {
+              //elmentjük ez egyik elemet
+              //egy átmeneti változóba
+              var temp = szamok[i];
+              //a kisebb értéket a nagyobb helyére
+              //tesszük
+              szamok[i] = szamok[j];
+              //a nagyobb érték a kisebb helyére kerül
+              szamok[j] = temp;
+             }
+
+     }
+
+}
+```
+
+
+
+
