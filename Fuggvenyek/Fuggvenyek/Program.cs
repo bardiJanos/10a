@@ -9,6 +9,15 @@ namespace Fuggvenyek
     class Program
     {
         //első verzió 50 csillagot ír ki
+        public static void HanyCsillag()
+        {
+            for (int i = 0; i < 50; i++)
+            {
+                Console.WriteLine("*");
+            }
+        }
+    
+
         public static void HanyCsillag(int hanycsillag,Boolean melle,string mit)
         {
             for (int i = 0; i < hanycsillag; i++)
@@ -30,7 +39,9 @@ namespace Fuggvenyek
         {
             return szam * szam;
         }
-
+        //Készítsen egy olyan függvényt, amely
+        //egy adott számot emel tetszőleges hatványra
+        //Math.Pow(3,3)
 
 
         static void Main(string[] args)
@@ -64,9 +75,9 @@ namespace Fuggvenyek
             //A megoldás az alprogram, vagy más néven függvény 
             //alkalmazása
             Console.WriteLine();
-            HanyCsillag(5,false,"Hello");
-            HanyCsillag(10,true,"Vaze");
-            HanyCsillag(5,false,"Alprogram!");
+            HanyCsillag(5, false, "Hello");
+            HanyCsillag(10, true, "Vaze");
+            HanyCsillag(5, false, "Alprogram!");
             HanyCsillag(12, false, "Függvény!");
 
             //Visszatérési értékkel rendelkező függvény hívása
@@ -77,14 +88,20 @@ namespace Fuggvenyek
             int[] sz1 = { 1, 8, 77, 9981, 65, 311, 989 };
             int[] sz2 = { 8, 78, 981, 6553, 31, 726 };
 
-            for (int i = 0; i < sz1.Length; i++)
-            {
-                Console.WriteLine(sz1[i]);
-            }
-
-
+            Console.WriteLine();
+            TombLista(sz1);
+            Console.WriteLine();
+            TombLista(sz2);
 
             Console.ReadKey();
+        }
+
+        private static void TombLista(int[] sz1)
+        {
+            for (int i = 0; i < sz1.Length; i++)
+            {
+                Console.Write(sz1[i]+" ");
+            }
         }
 
         //Ide is kerülhet a függvény
