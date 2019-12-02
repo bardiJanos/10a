@@ -460,6 +460,13 @@ for (int i = 0; i < szamok.Length-1; i++)
 }
 ```
 
+# Hibakeresés a programban
 
+## Hibák fordítási időben
+
+Ezek a hibák nem engedik a forráskód lefordítását, a program elindulását, tehát
+a programozó rögtön értesül erről. Nagy általánosságban ezek szintaktikai hibák.
+
+**Szintaktikai hiba:** egy utasítást nem úgy ír a programozó, ahogy a nyelv megköveteli.
 
 
