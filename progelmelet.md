@@ -469,4 +469,6 @@ a programozó rögtön értesül erről. Nagy általánosságban ezek szintaktik
 
 **Szintaktikai hiba:** egy utasítást nem úgy ír a programozó, ahogy a nyelv megköveteli.
 
-
+**Szemantikai hiba:** a program lefordul, működik, de esetenként nem kívánt működést
+tapasztalunk. Pl. nem kap megfelelő értéket egy változó, nem fut le egy ciklus, pedig
+kéne. 
