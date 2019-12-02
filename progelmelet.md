@@ -477,3 +477,9 @@ A futás közben jelentkező problémák felderítése sokkal nehezebb. Ezt a m�
 
 **Lépésenkénti programvégrehajtás**
 Ebben az esetben töréspontot helyezünk el a programban, ezen a ponton a program futása megáll, és ezt követően lépésenként hajtathatjuk végre a program utasításait, figyelhetjük a változók értékét.
+
+**Töréspont beszúrása**
+
+Az F9 gomb lenyomásával lehet a főprogram valamely sorára töréspontot beszúrni. A töréspont elérésekor a program futása megáll, és a forráskódnál követhetjük a program utasításait. F10 gombbal lehet a következő utasításra lépni. Az egyes változók aktuális értéke megtekinthető ha az egérrel a változó nevére mutatunk. Tömbök esetében a tömb elemeinek az értéke is megtekinthető. Egy programba több töréspont is elhelyezhető.
+
+
