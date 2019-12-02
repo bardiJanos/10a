@@ -472,3 +472,8 @@ a programozó rögtön értesül erről. Nagy általánosságban ezek szintaktik
 **Szemantikai hiba:** a program lefordul, működik, de esetenként nem kívánt működést
 tapasztalunk. Pl. nem kap megfelelő értéket egy változó, nem fut le egy ciklus, pedig
 kéne. 
+
+A futás közben jelentkező problémák felderítése sokkal nehezebb. Ezt a műveletet nevezik hibakeresésnek, más néven**debugolás**-nak.
+
+**Lépésenkénti programvégrehajtás**
+Ebben az esetben töréspontot helyezünk el a programban, ezen a ponton a program futása megáll, és ezt követően lépésenként hajtathatjuk végre a program utasításait, figyelhetjük a változók értékét.
