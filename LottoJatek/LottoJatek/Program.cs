@@ -18,6 +18,7 @@ namespace LottoJatek
             int[] tippek = new int[hanySzam];
             int[] nyeroSzamok = new int[hanySzam];
             int talalatok = 0;
+            Random rand = new Random();
 
             for (int i = 0; i < tippek.Length; i++)
             {
@@ -35,6 +36,26 @@ namespace LottoJatek
             {
                 Console.Write(tippek[i] + " ");
             }
+
+            for (int i = 0; i < nyeroSzamok.Length; i++)
+            {
+
+                var temp = rand.Next(1, szamTer + 1);
+                while (nyeroSzamok.Contains(temp))
+                {
+                    temp = rand.Next(1, szamTer + 1);
+                }
+                nyeroSzamok[i] = temp;
+            }
+
+            Console.WriteLine();
+            for (int i = 0; i < nyeroSzamok.Length; i++)
+            {
+                Console.Write(nyeroSzamok[i]+" ");
+            }
+
+
+
 
             Console.ReadKey();
         }
