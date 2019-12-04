@@ -460,6 +460,26 @@ for (int i = 0; i < szamok.Length-1; i++)
 }
 ```
 
+# Hibakeresés a programban
 
+## Hibák fordítási időben
+
+Ezek a hibák nem engedik a forráskód lefordítását, a program elindulását, tehát
+a programozó rögtön értesül erről. Nagy általánosságban ezek szintaktikai hibák.
+
+**Szintaktikai hiba:** egy utasítást nem úgy ír a programozó, ahogy a nyelv megköveteli.
+
+**Szemantikai hiba:** a program lefordul, működik, de esetenként nem kívánt működést
+tapasztalunk. Pl. nem kap megfelelő értéket egy változó, nem fut le egy ciklus, pedig
+kéne. 
+
+A futás közben jelentkező problémák felderítése sokkal nehezebb. Ezt a műveletet nevezik hibakeresésnek, más néven**debugolás**-nak.
+
+**Lépésenkénti programvégrehajtás**
+Ebben az esetben töréspontot helyezünk el a programban, ezen a ponton a program futása megáll, és ezt követően lépésenként hajtathatjuk végre a program utasításait, figyelhetjük a változók értékét.
+
+**Töréspont beszúrása**
+
+Az F9 gomb lenyomásával lehet a főprogram valamely sorára töréspontot beszúrni. A töréspont elérésekor a program futása megáll, és a forráskódnál követhetjük a program utasításait. F10 gombbal lehet a következő utasításra lépni. Az egyes változók aktuális értéke megtekinthető ha az egérrel a változó nevére mutatunk. Tömbök esetében a tömb elemeinek az értéke is megtekinthető. Egy programba több töréspont is elhelyezhető.
 
 
