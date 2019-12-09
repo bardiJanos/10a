@@ -527,6 +527,8 @@ foreach (var xc in nevek)
 #  Összetett adattípusok, struktúra
 
 ## Struktúra létrehozása
+
+**A struktúra megadását a főprogramon (main függvény) kívül kell elvégezni
 ```C#
 
 public struct Dolgozo
@@ -537,4 +539,18 @@ public struct Dolgozo
   public int suly;
   public string anyjaNeve;
 }
+```
+## Struktúra példány létrehozása a programban, értékek megadása
+```C#
+Dolgozo dolgozo = new Dolgozo();
+dolgozo.nev = "Sivár Iván";
+dolgozo.anyjaNeve = "Korompai Eufrozina";
+dolgozo.magassag = 180;
+dolgozo.suly = 86;
+dolgozo.szulEv = 1989;
+```
+## Dolgozok típus elemeit tartalmazó lista létrehozása, dolgozo hozzáadása
+```C#
+List<Dolgozo> dolgozok = new List<Dolgozo>();
+dolgozok.Add(dolgozo);
 ```
