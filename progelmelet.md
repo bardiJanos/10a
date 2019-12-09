@@ -482,4 +482,7 @@ Ebben az esetben töréspontot helyezünk el a programban, ezen a ponton a progr
 
 Az F9 gomb lenyomásával lehet a főprogram valamely sorára töréspontot beszúrni. A töréspont elérésekor a program futása megáll, és a forráskódnál követhetjük a program utasításait. F10 gombbal lehet a következő utasításra lépni. Az egyes változók aktuális értéke megtekinthető ha az egérrel a változó nevére mutatunk. Tömbök esetében a tömb elemeinek az értéke is megtekinthető. Egy programba több töréspont is elhelyezhető.
 
+# Listák
+
+A lista egy generikus adatszerkezet. A generikus azt jelenti, hogy bármilyen (egyszerű vagy összetett) típusa lehet. A tömbbel ellentétben a lista elemszámát nem kell megadni, az elemszám mindig annyi, amennyi elem a listán éppen található.
 
