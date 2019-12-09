@@ -486,3 +486,11 @@ Az F9 gomb lenyomásával lehet a főprogram valamely sorára töréspontot besz
 
 A lista egy generikus adatszerkezet. A generikus azt jelenti, hogy bármilyen (egyszerű vagy összetett) típusa lehet. A tömbbel ellentétben a lista elemszámát nem kell megadni, az elemszám mindig annyi, amennyi elem a listán éppen található.
 
+## Lista létrehozása (az elemek típusa int)
+```C#
+List<int> szamok = new List<int>();
+```
+## Lista létrehozása (az elemek típusa string)
+```C#
+List<string> nevek = new List<string>();
+```
