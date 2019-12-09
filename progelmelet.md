@@ -504,3 +504,23 @@ nevek.Add("Ubul");
 nevek.Add("Zénó");
 nevek.Add("Eulália");
 ```
+## Hozzáférés a lista elemeihez
+```C#
+Console.WriteLine(szamok[0]);
+Console.WriteLine(nevek[1]);
+```
+## A lista elemeinek listázása
+```C#
+for (int i = 0; i < szamok.Count; i++)
+{
+ Console.WriteLine(szamok[i]);
+}
+```
+
+## A lista elemeinek listázása foreach-el
+```C#
+foreach (var xc in nevek)
+{
+ Console.WriteLine(xc);
+}
+```
