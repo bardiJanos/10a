@@ -524,3 +524,17 @@ foreach (var xc in nevek)
  Console.WriteLine(xc);
 }
 ```
+#  Összetett adattípusok, struktúra
+
+## Struktúra létrehozása
+```C#
+
+public struct Dolgozo
+{
+  public string nev;
+  public int szulEv;
+  public int magassag;
+  public int suly;
+  public string anyjaNeve;
+}
+```
