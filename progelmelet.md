@@ -554,3 +554,15 @@ dolgozo.szulEv = 1989;
 List<Dolgozo> dolgozok = new List<Dolgozo>();
 dolgozok.Add(dolgozo);
 ```
+## a dolgozok lista elemeinek adataihoz való hozzáférés
+```C#
+Console.WriteLine(dolgozok[0].nev);
+Console.WriteLine(dolgozok[0].anyjaNeve);
+```
+## a dolgozok lista kiíratása
+```C#
+foreach (var d in dolgozok)
+{
+ Console.WriteLine($"{d.nev},{d.anyjaNeve},{d.magassag},{d.suly},{d.szulEv}");
+}
+```
