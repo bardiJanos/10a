@@ -499,4 +499,8 @@ List<string> nevek = new List<string>();
 szamok.Add(12);
 szamok.Add(48);
 szamok.Add(1223);
+
+nevek.Add("Ubul");
+nevek.Add("Zénó");
+nevek.Add("Eulália");
 ```
