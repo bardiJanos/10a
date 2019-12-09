@@ -494,3 +494,9 @@ List<int> szamok = new List<int>();
 ```C#
 List<string> nevek = new List<string>();
 ```
+## Elemek hozzáadása a listához
+```C#
+szamok.Add(12);
+szamok.Add(48);
+szamok.Add(1223);
+```
