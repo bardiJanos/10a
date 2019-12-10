@@ -50,7 +50,7 @@ namespace LottoJatek
             TombLista(nyeroSzamok);
 
             Console.WriteLine($"Ennyi évbe telt:{soroslasokSzama/52}");
-            long koltseg = soroslasokSzama * 250;
+            decimal koltseg = (decimal)soroslasokSzama * 250;
             Console.WriteLine($"Költség:{koltseg}");
             ////második, egyszerűbb megoldás
             //talalatok = 0;
