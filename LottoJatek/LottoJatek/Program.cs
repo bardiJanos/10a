@@ -21,21 +21,37 @@ namespace LottoJatek
             Random rand = new Random();
 
             Tippeles(szamTer, tippek);
+            var soroslasokSzama = 0;
+            //TombLista(tippek);
+            while (talalatok!=5)
+            {
 
-            TombLista(tippek);
-
+            talalatok = 0;
             Sorsolas(szamTer, nyeroSzamok, rand);
 
-            Console.WriteLine();
+            //Console.WriteLine();
 
-            TombLista(nyeroSzamok);
+            //TombLista(nyeroSzamok);
 
             //első, bonyolultabb megoldás
             talalatok = TalalatSzam(tippek, nyeroSzamok, talalatok);
 
-            Console.WriteLine();
-            Console.WriteLine($"Találatok száma:{talalatok}");
+                //Console.WriteLine();
+                if (talalatok>1)
+                {
+                    Console.WriteLine($"Találatok száma:{talalatok}");
+                }
+            
+                soroslasokSzama++;
+            }
 
+            TombLista(tippek);
+            Console.WriteLine();
+            TombLista(nyeroSzamok);
+
+            Console.WriteLine($"Ennyi évbe telt:{soroslasokSzama/52}");
+            long koltseg = soroslasokSzama * 250;
+            Console.WriteLine($"Költség:{koltseg}");
             ////második, egyszerűbb megoldás
             //talalatok = 0;
 

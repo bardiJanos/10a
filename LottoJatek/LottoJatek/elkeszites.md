@@ -47,6 +47,9 @@ Nyerőszámok listázása
 **6.lépés**
 Találatok meghatározása
 
+Módosítsa a programot úgy, hogy a tippek bekérése
+után adott számú találatig fusson!
+
 
 
 
