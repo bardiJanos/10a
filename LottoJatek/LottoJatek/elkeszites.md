@@ -32,7 +32,20 @@ A tippnek a következőknek kell megfelelnie:
 - a tippeknek egyedinek kell lennie (ha már szerepel a tippek között, újra be kell kérni)
 - addig kell a bekérést folytatni, amíg minden tipp egyedi nem lesz.
 
+**3.lépés**
 
+Tippek listázása
+
+**4.lépés**
+Nyerőszámok sorsolása
+-hasonlít a tippeléshez, de itt csak arra kell figyelni, hogy
+egy már kisorsolt számot ne tegyünk ismét a nyerőszámok közé
+
+**5.lépés**
+Nyerőszámok listázása
+
+**6.lépés**
+Találatok meghatározása
 
 
 

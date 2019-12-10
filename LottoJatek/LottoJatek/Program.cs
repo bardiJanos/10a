@@ -20,23 +20,46 @@ namespace LottoJatek
             int talalatok = 0;
             Random rand = new Random();
 
+            Tippeles(szamTer, tippek);
+
+            TombLista(tippek);
+
+            Sorsolas(szamTer, nyeroSzamok, rand);
+
+            Console.WriteLine();
+
+            TombLista(nyeroSzamok);
+
+            //első, bonyolultabb megoldás
             for (int i = 0; i < tippek.Length; i++)
             {
-                Console.Write($"{i+1}.tipp:");
-                var temp= Convert.ToInt32(Console.ReadLine());
-                while (temp<1 || temp>szamTer || tippek.Contains(temp))
+                for (int j = 0; j < nyeroSzamok.Length; j++)
                 {
-                    Console.Write($"Rossz tipp!Újra!{i + 1}.tipp:");
-                    temp = Convert.ToInt32(Console.ReadLine());
+                    if (tippek[i] == nyeroSzamok[j])
+                    {
+                        talalatok++;
+                    }
                 }
-                tippek[i] = temp;
             }
+
+            Console.WriteLine($"Találatok száma:{talalatok}");
+
+            //második, egyszerűbb megoldás
+            talalatok = 0;
 
             for (int i = 0; i < tippek.Length; i++)
             {
-                Console.Write(tippek[i] + " ");
+                if (nyeroSzamok.Contains(tippek[i]))
+                {
+                    talalatok++;
+                }
             }
+            Console.WriteLine($"Találatok száma:{talalatok}");
+            Console.ReadKey();
+        }
 
+        private static void Sorsolas(int szamTer, int[] nyeroSzamok, Random rand)
+        {
             for (int i = 0; i < nyeroSzamok.Length; i++)
             {
 
@@ -47,17 +70,29 @@ namespace LottoJatek
                 }
                 nyeroSzamok[i] = temp;
             }
+        }
 
-            Console.WriteLine();
-            for (int i = 0; i < nyeroSzamok.Length; i++)
+        private static void TombLista(int[] tippek)
+        {
+            for (int i = 0; i < tippek.Length; i++)
             {
-                Console.Write(nyeroSzamok[i]+" ");
+                Console.Write(tippek[i] + " ");
             }
+        }
 
-
-
-
-            Console.ReadKey();
+        private static void Tippeles(int szamTer, int[] tippek)
+        {
+            for (int i = 0; i < tippek.Length; i++)
+            {
+                Console.Write($"{i + 1}.tipp:");
+                var temp = Convert.ToInt32(Console.ReadLine());
+                while (temp < 1 || temp > szamTer || tippek.Contains(temp))
+                {
+                    Console.Write($"Rossz tipp!Újra!{i + 1}.tipp:");
+                    temp = Convert.ToInt32(Console.ReadLine());
+                }
+                tippek[i] = temp;
+            }
         }
     }
 }
