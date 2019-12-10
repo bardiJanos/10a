@@ -31,6 +31,27 @@ namespace LottoJatek
             TombLista(nyeroSzamok);
 
             //első, bonyolultabb megoldás
+            talalatok = TalalatSzam(tippek, nyeroSzamok, talalatok);
+
+            Console.WriteLine();
+            Console.WriteLine($"Találatok száma:{talalatok}");
+
+            ////második, egyszerűbb megoldás
+            //talalatok = 0;
+
+            //for (int i = 0; i < tippek.Length; i++)
+            //{
+            //    if (nyeroSzamok.Contains(tippek[i]))
+            //    {
+            //        talalatok++;
+            //    }
+            //}
+            //Console.WriteLine($"Találatok száma:{talalatok}");
+            Console.ReadKey();
+        }
+
+        private static int TalalatSzam(int[] tippek, int[] nyeroSzamok, int talalatok)
+        {
             for (int i = 0; i < tippek.Length; i++)
             {
                 for (int j = 0; j < nyeroSzamok.Length; j++)
@@ -42,20 +63,7 @@ namespace LottoJatek
                 }
             }
 
-            Console.WriteLine($"Találatok száma:{talalatok}");
-
-            //második, egyszerűbb megoldás
-            talalatok = 0;
-
-            for (int i = 0; i < tippek.Length; i++)
-            {
-                if (nyeroSzamok.Contains(tippek[i]))
-                {
-                    talalatok++;
-                }
-            }
-            Console.WriteLine($"Találatok száma:{talalatok}");
-            Console.ReadKey();
+            return talalatok;
         }
 
         private static void Sorsolas(int szamTer, int[] nyeroSzamok, Random rand)
