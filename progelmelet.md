@@ -482,4 +482,87 @@ Ebben az esetben töréspontot helyezünk el a programban, ezen a ponton a progr
 
 Az F9 gomb lenyomásával lehet a főprogram valamely sorára töréspontot beszúrni. A töréspont elérésekor a program futása megáll, és a forráskódnál követhetjük a program utasításait. F10 gombbal lehet a következő utasításra lépni. Az egyes változók aktuális értéke megtekinthető ha az egérrel a változó nevére mutatunk. Tömbök esetében a tömb elemeinek az értéke is megtekinthető. Egy programba több töréspont is elhelyezhető.
 
+# Listák
 
+A lista egy generikus adatszerkezet. A generikus azt jelenti, hogy bármilyen (egyszerű vagy összetett) típusa lehet. A tömbbel ellentétben a lista elemszámát nem kell megadni, az elemszám mindig annyi, amennyi elem a listán éppen található.
+
+## Lista létrehozása (az elemek típusa int)
+```C#
+List<int> szamok = new List<int>();
+```
+## Lista létrehozása (az elemek típusa string)
+```C#
+List<string> nevek = new List<string>();
+```
+## Elemek hozzáadása a listához
+```C#
+szamok.Add(12);
+szamok.Add(48);
+szamok.Add(1223);
+
+nevek.Add("Ubul");
+nevek.Add("Zénó");
+nevek.Add("Eulália");
+```
+## Hozzáférés a lista elemeihez
+```C#
+Console.WriteLine(szamok[0]);
+Console.WriteLine(nevek[1]);
+```
+## A lista elemeinek listázása
+```C#
+for (int i = 0; i < szamok.Count; i++)
+{
+ Console.WriteLine(szamok[i]);
+}
+```
+
+## A lista elemeinek listázása foreach-el
+```C#
+foreach (var xc in nevek)
+{
+ Console.WriteLine(xc);
+}
+```
+#  Összetett adattípusok, struktúra
+
+## Struktúra létrehozása
+
+**A struktúra megadását a főprogramon (main függvény) kívül kell elvégezni
+```C#
+
+public struct Dolgozo
+{
+  public string nev;
+  public int szulEv;
+  public int magassag;
+  public int suly;
+  public string anyjaNeve;
+}
+```
+## Struktúra példány létrehozása a programban, értékek megadása
+```C#
+Dolgozo dolgozo = new Dolgozo();
+dolgozo.nev = "Sivár Iván";
+dolgozo.anyjaNeve = "Korompai Eufrozina";
+dolgozo.magassag = 180;
+dolgozo.suly = 86;
+dolgozo.szulEv = 1989;
+```
+## Dolgozok típus elemeit tartalmazó lista létrehozása, dolgozo hozzáadása
+```C#
+List<Dolgozo> dolgozok = new List<Dolgozo>();
+dolgozok.Add(dolgozo);
+```
+## a dolgozok lista elemeinek adataihoz való hozzáférés
+```C#
+Console.WriteLine(dolgozok[0].nev);
+Console.WriteLine(dolgozok[0].anyjaNeve);
+```
+## a dolgozok lista kiíratása
+```C#
+foreach (var d in dolgozok)
+{
+ Console.WriteLine($"{d.nev},{d.anyjaNeve},{d.magassag},{d.suly},{d.szulEv}");
+}
+```
