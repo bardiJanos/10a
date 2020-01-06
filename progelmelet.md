@@ -566,3 +566,17 @@ foreach (var d in dolgozok)
  Console.WriteLine($"{d.nev},{d.anyjaNeve},{d.magassag},{d.suly},{d.szulEv}");
 }
 ```
+# Függvények azaz alprogramok létrehozása
+
+A függvény olyan egysége a programnak, amelyet egyszer létrehozunk,
+majd a főprogramból annyiszor hívhatjuk meg, amennyiszer szükséges.
+
+Két formája van, az egyik végrehajtja a függvényben megadott
+utasításokat. Ezt a **void** kulcsszó jelzi.
+A másik formája a függvényeknek rendelkezik visszatérési értékkel. 
+Ebben az esetben nem a **void** kulcsszó szerepel, hanem valamilyen
+változó típus (int,string,double...stb)
+ 
+
+
+
