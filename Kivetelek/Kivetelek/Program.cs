@@ -13,7 +13,7 @@ namespace Kivetelek
             //Kivételek kezelése
             //azokat a műveleteket, amelyek kivételt
             //válthatnak ki try..catch blokkba kell rakni
-
+            // tetszőleges számú catch blokkot lehet használni
             try
             {
                 int szam = Convert.ToInt32(Console.ReadLine());
