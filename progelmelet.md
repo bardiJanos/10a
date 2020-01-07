@@ -566,3 +566,74 @@ foreach (var d in dolgozok)
  Console.WriteLine($"{d.nev},{d.anyjaNeve},{d.magassag},{d.suly},{d.szulEv}");
 }
 ```
+# Függvények azaz alprogramok létrehozása
+
+A függvény olyan egysége a programnak, amelyet egyszer létrehozunk,
+majd a főprogramból annyiszor hívhatjuk meg, amennyiszer szükséges.
+
+Két formája van, az egyik végrehajtja a függvényben megadott
+utasításokat. Ezt a **void** kulcsszó jelzi.
+A másik formája a függvényeknek rendelkezik visszatérési értékkel. 
+Ebben az esetben nem a **void** kulcsszó szerepel, hanem valamilyen
+változó típus (int,string,double...stb)
+ 
+## Példa
+
+Adott 4 tömb a főprogramban_
+```c#
+int[] t1 = { 1, 23, 445, 78, 7765, 43, 566, 87 };
+int[] t2 = { 11, 213, 45, 781, 75, 439, 56, 8766,1123,899 };
+int[] t3 = { 97, 135, 459, 78111, 175, 3999, 1156, 8569, 1233, 89900 };
+int[] t4 = { 9823, 22135, 11459, 789111, 23, 36, 99844, 102569, 221033, 79900 };
+```
+Szeretnénk egy olyan függvényt, amely képes egy adott tömb elemeinek a kilistázására. A függvénynek nem kell visszaadnia értéket, tehát
+a void kulcsszót kell használni.
+
+```C#
+ public static void TombLista(int[] tomb)
+        {
+            for (int i = 0; i < tomb.Length; i++)
+            {
+                Console.Write(tomb[i]+" ");
+            }
+            Console.WriteLine();
+        }
+```
+
+A függvény híváskor kapja meg a kiírandó tömböt:
+
+```C#
+TombLista(t1);
+```
+
+Az egész együtt:
+
+```C#
+ public static void TombLista(int[] tomb)
+        {
+            for (int i = 0; i < tomb.Length; i++)
+            {
+                Console.Write(tomb[i]+" ");
+            }
+            Console.WriteLine();
+        }
+
+        static void Main(string[] args)
+        {
+            int[] t1 = { 1, 23, 445, 78, 7765, 43, 566, 87 };
+            int[] t2 = { 11, 213, 45, 781, 75, 439, 56, 8766,1123,899 };
+            int[] t3 = { 97, 135, 459, 78111, 175, 3999, 1156, 8569, 1233, 89900 };
+            int[] t4 = { 9823, 22135, 11459, 789111, 23, 36, 99844, 102569, 221033, 79900 };
+
+            TombLista(t1);
+            TombLista(t2);
+            TombLista(t3);
+            TombLista(t4);
+
+
+            Console.ReadKey();
+        }
+
+```
+
+
