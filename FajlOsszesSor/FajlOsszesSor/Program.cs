@@ -19,7 +19,7 @@ namespace FajlOsszesSor
                 for (int i = 0; i < sorok.Length; i++)
                 {
                     Console.WriteLine(sorok[i]);
-                }
+                }                
             }
             catch (Exception ex)
             {
