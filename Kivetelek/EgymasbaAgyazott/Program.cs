@@ -10,8 +10,28 @@ namespace EgymasbaAgyazott
     {
         static void Main(string[] args)
         {
+            int a = 1;
+
             try
-            {   //kivétel dobása
+            {
+                try
+                {
+                    if (a==0)
+                    {
+                        throw new ArgumentNullException();
+                    } else
+                    {
+                        throw new FieldAccessException();
+                    }
+                }
+                catch (ArgumentNullException ex)
+                {
+
+                    Console.WriteLine(ex.Message);
+                    
+                }
+
+                //kivétel dobása
                 throw new NullReferenceException();
             }
             catch(NullReferenceException ex)
