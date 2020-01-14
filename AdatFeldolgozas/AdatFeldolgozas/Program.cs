@@ -60,7 +60,25 @@ namespace AdatFeldolgozas
             //Itt tudunk valamit kezdeni az adatokkal
             Console.WriteLine($"Adatok száma:{szemelyek.Count}");
 
-            var nyolcvanas = szemelyek.FindAll(x=>x.szuletesEve>1980);
+            //az 1980 után születettek kiválogatása
+            var nyolcvanas = szemelyek.FindAll(x => x.szuletesEve == 1980 && x.szuletesiHely.StartsWith("C"));
+
+            //a nyolcvanas lista kiíratása
+            //ehhez a foreach a legjobb
+
+            foreach (var i in nyolcvanas)
+            {
+                Console.WriteLine($"{i.vezeteknev},{i.keresztnev},{i.szuletesEve},{i.szuletesiHely}");
+            }
+
+            //Hány darab adat ez:
+            Console.WriteLine($"Adatok száma:{nyolcvanas.Count}");
+
+
+            var elsonyolcvanas = szemelyek.Find(x => x.szuletesEve == 1980);
+
+            Console.WriteLine($"{elsonyolcvanas.vezeteknev},{elsonyolcvanas.keresztnev}");
+
 
             Console.ReadKey();
         }
