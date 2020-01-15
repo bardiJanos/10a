@@ -61,7 +61,7 @@ namespace AdatFeldolgozas
             Console.WriteLine($"Adatok száma:{szemelyek.Count}");
 
             //az 1980 után születettek kiválogatása
-            var nyolcvanas = szemelyek.FindAll(x => x.szuletesEve == 1980 && x.szuletesiHely.StartsWith("C"));
+            var nyolcvanas = szemelyek.FindAll(x => x.szuletesEve == 1980);
 
             //a nyolcvanas lista kiíratása
             //ehhez a foreach a legjobb
@@ -78,6 +78,25 @@ namespace AdatFeldolgozas
             var elsonyolcvanas = szemelyek.Find(x => x.szuletesEve == 1980);
 
             Console.WriteLine($"{elsonyolcvanas.vezeteknev},{elsonyolcvanas.keresztnev}");
+            //kiírás fájlba
+            try
+            {   //egy FileStream és egy streamwriter kell
+                FileStream outFajl = new FileStream(@"nyolcvan.txt", FileMode.Create);
+                StreamWriter writer = new StreamWriter(outFajl,Encoding.Default);
+
+                foreach (var i in nyolcvanas)
+                {
+                    writer.WriteLine($"{i.vezeteknev},{i.keresztnev},{i.szuletesEve},{i.szuletesiHely}");
+                }
+                //le kell zárni, különben nem íródik ki az összes sor
+                writer.Close();
+                Console.WriteLine("Kiírás vége!");
+            }
+            catch (Exception ex)
+            {
+
+                Console.WriteLine(ex.Message);
+            }
 
 
             Console.ReadKey();
