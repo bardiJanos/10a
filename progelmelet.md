@@ -707,4 +707,23 @@ Az előbbi példa try..catch blokkban
                 
             }
 ```
+## Szöveges fájl beolvasása a ReadAllLines paranccsal
 
+A **ReadAllLines** beolvassa a szöveges fájlt soronként, a sorokat egy string tömbbe teszi.
+
+```C#
+try
+   {   
+     var sorok = File.ReadAllLines(@"c:/eu/EUcsatlakozas.txt", Encoding.Default);
+
+       for (int i = 0; i < sorok.Length; i++)
+         {
+                    Console.WriteLine(sorok[i]);
+         }
+
+   }
+catch (Exception ex)
+   {
+       Console.WriteLine(ex.Message);                
+   }
+```            
