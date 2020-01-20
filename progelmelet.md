@@ -727,3 +727,45 @@ catch (Exception ex)
        Console.WriteLine(ex.Message);                
    }
 ```            
+## Beolvasás és feldolgozás
+
+```C#
+      struct orszag
+        {
+            public string orszagnev;
+            public string csatlakozas;
+        }
+
+        static void Main(string[] args)
+        {
+            //szükségesek az adatok feldolgozásához
+            List<orszag> orszagok = new List<orszag>();
+            orszag orszag = new orszag();
+
+            try
+            {
+                var sorok=File.ReadAllLines(@"c:/eu/EUcsatlakozas.txt", Encoding.Default);
+                for (int i = 0; i < sorok.Length; i++)
+                {
+                    var adatok = sorok[i].Split(';');
+                    orszag.orszagnev = adatok[0];
+                    orszag.csatlakozas = adatok[1];
+                    orszagok.Add(orszag);
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);                
+            }
+
+            Console.WriteLine($"Az országok száma a listában:{orszagok.Count}");
+
+            foreach (var i in orszagok)
+            {
+                Console.WriteLine($"{i.orszagnev},{i.csatlakozas}");
+            }
+
+
+            Console.ReadKey();
+        }
+```
