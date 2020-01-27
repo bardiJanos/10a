@@ -794,3 +794,30 @@ List<string> nevek = new List<string> {"Éva","Ubul","Gerzson","Ágnes","Zénó"
                 
             }
 ```
+
+**A StreamWriter használata USING kódblokkal**
+A USING kódblokk automatikusan elvégzi a fájlba való írás után elvégzendő dolgokat (fájl bezárása, erőforrások felszabadítása), használata javasolt.
+A kód így néz ki a USING használatával:
+```C#
+try
+            {
+                FileStream fajl = new FileStream(@"nevek.txt", FileMode.Create);
+
+                //a using blokk eltakarít maga után, az előzőnél jobb megoldás
+
+                using (StreamWriter writer = new StreamWriter(fajl, Encoding.Default))
+                {
+                    foreach (var i in nevek)
+                    {
+                        writer.WriteLine(i);
+                    }
+                }          
+                                
+                Console.WriteLine("Kiírás kész!");
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+                
+            }
+```
