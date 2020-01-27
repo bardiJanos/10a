@@ -775,7 +775,7 @@ catch (Exception ex)
 ```C#
 List<string> nevek = new List<string> {"Éva","Ubul","Gerzson","Ágnes","Zénó","Eufrozina" };
 ```
-** FileStream-et és StreamWriter-t használunk
+** FileStream-et és StreamWriter-t használunk**
 ```C#
  try
             {
