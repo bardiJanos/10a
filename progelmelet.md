@@ -769,3 +769,28 @@ catch (Exception ex)
             Console.ReadKey();
         }
 ```
+
+## Adatok írása fájlba
+**Adott a következő lista, amit fájlba szeretnénk írni:**
+```C#
+List<string> nevek = new List<string> {"Éva","Ubul","Gerzson","Ágnes","Zénó","Eufrozina" };
+```
+** FileStream-et és StreamWriter-t használunk
+```C#
+ try
+            {
+                FileStream fajl = new FileStream(@"nevek.txt", FileMode.Create);
+                StreamWriter writer = new StreamWriter(fajl, Encoding.Default);
+                foreach (var i in nevek)
+                {
+                    writer.WriteLine(i);
+                }
+                writer.Close();// a lezárás itt nagyon fontos
+                Console.WriteLine("Kiírás kész!");
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+                
+            }
+```
