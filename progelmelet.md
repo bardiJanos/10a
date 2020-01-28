@@ -636,4 +636,188 @@ Az egész együtt:
 
 ```
 
+# Fájlok kezelése
 
+A fájlok kezelésére alapvetően két módszer van:
+ - szöveges fájlok kezelése
+ - fájlok kezelése bináris módban
+
+## FileStream, StreamReader
+
+A fájl betöltéséhez deklarálni kell egy FileStream-et.
+
+```C#
+ FileStream fajl = new FileStream(@"tesztadat_20k.txt", FileMode.Open);
+```
+Ezután létre kell hozni egy StreamReader-t, ez fog olvasni a fájlból, soronként.
+A korábban megadott FileStream-et (fajl) kell megadni neki, valamint a szöveg kódolását (Encoding.Default)
+```C#
+StreamReader reader = new StreamReader(fajl, Encoding.Default);
+```
+Ezt követően egy while ciklussal olvasható a fájl, soronként. A ciklus addig fut, amíg az utolsó sor is be nem lesz olvasva.
+```c#
+ while (!reader.EndOfStream)
+    {
+        var sor = reader.ReadLine();
+        Console.WriteLine(sor);
+    }
+```
+A beolvasás után be kell zárni a fájlt
+```C#
+ reader.Close();
+```
+## Kivételek, kezelésük a programban
+
+A programok működése során sokféle probléma adódhat, ebben az esetben a rendszer ún. exception-öket (kivételeket)  hoz létre. A kivételek kezelésével kell a programozónak úrrá lennie a problémán.
+
+A kivételek elkapásához és kezeléséhez egy külön blokkot kell használni, melynek neve: **try...catch**
+
+```C#
+try {
+
+//Ide kerülnek a végrehajtani kívánt, és adott esetben
+//kivételt létrehozó műveletek
+
+}
+catch()
+{
+//Itt adjuk meg, hogy mi történjen, ha kivétel 
+//keletkezett
+}
+```
+
+Az előbbi példa try..catch blokkban
+```C#
+ try
+            {
+                FileStream fajl = new FileStream(@"tesztadat_20k.txt", FileMode.Open);
+                StreamReader reader = new StreamReader(fajl, Encoding.Default);
+
+                while (!reader.EndOfStream)
+                {
+                    var sor = reader.ReadLine();
+                    Console.WriteLine(sor);
+                }
+
+                reader.Close();
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+                
+            }
+```
+## Szöveges fájl beolvasása a ReadAllLines paranccsal
+
+A **ReadAllLines** beolvassa a szöveges fájlt soronként, a sorokat egy string tömbbe teszi.
+
+```C#
+try
+   {   
+     var sorok = File.ReadAllLines(@"c:/eu/EUcsatlakozas.txt", Encoding.Default);
+
+       for (int i = 0; i < sorok.Length; i++)
+         {
+                    Console.WriteLine(sorok[i]);
+         }
+
+   }
+catch (Exception ex)
+   {
+       Console.WriteLine(ex.Message);                
+   }
+```            
+## Beolvasás és feldolgozás
+
+```C#
+      struct orszag
+        {
+            public string orszagnev;
+            public string csatlakozas;
+        }
+
+        static void Main(string[] args)
+        {
+            //szükségesek az adatok feldolgozásához
+            List<orszag> orszagok = new List<orszag>();
+            orszag orszag = new orszag();
+
+            try
+            {
+                var sorok=File.ReadAllLines(@"c:/eu/EUcsatlakozas.txt", Encoding.Default);
+                for (int i = 0; i < sorok.Length; i++)
+                {
+                    var adatok = sorok[i].Split(';');
+                    orszag.orszagnev = adatok[0];
+                    orszag.csatlakozas = adatok[1];
+                    orszagok.Add(orszag);
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);                
+            }
+
+            Console.WriteLine($"Az országok száma a listában:{orszagok.Count}");
+
+            foreach (var i in orszagok)
+            {
+                Console.WriteLine($"{i.orszagnev},{i.csatlakozas}");
+            }
+
+
+            Console.ReadKey();
+        }
+```
+
+## Adatok írása fájlba
+**Adott a következő lista, amit fájlba szeretnénk írni:**
+```C#
+List<string> nevek = new List<string> {"Éva","Ubul","Gerzson","Ágnes","Zénó","Eufrozina" };
+```
+** FileStream-et és StreamWriter-t használunk**
+```C#
+ try
+            {
+                FileStream fajl = new FileStream(@"nevek.txt", FileMode.Create);
+                StreamWriter writer = new StreamWriter(fajl, Encoding.Default);
+                foreach (var i in nevek)
+                {
+                    writer.WriteLine(i);
+                }
+                writer.Close();// a lezárás itt nagyon fontos
+                Console.WriteLine("Kiírás kész!");
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+                
+            }
+```
+
+**A StreamWriter használata USING kódblokkal**
+A USING kódblokk automatikusan elvégzi a fájlba való írás után elvégzendő dolgokat (fájl bezárása, erőforrások felszabadítása), használata javasolt.
+A kód így néz ki a USING használatával:
+```C#
+try
+            {
+                FileStream fajl = new FileStream(@"nevek.txt", FileMode.Create);
+
+                //a using blokk eltakarít maga után, az előzőnél jobb megoldás
+
+                using (StreamWriter writer = new StreamWriter(fajl, Encoding.Default))
+                {
+                    foreach (var i in nevek)
+                    {
+                        writer.WriteLine(i);
+                    }
+                }          
+                                
+                Console.WriteLine("Kiírás kész!");
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+                
+            }
+```
