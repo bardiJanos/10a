@@ -55,6 +55,38 @@ namespace Nobel
             var _irodalmi2017 = nobeldijasok.Find(x => x.Ev == 2017 && x.Tipus == "irodalmi");
 
             Console.WriteLine($"{_irodalmi2017.Vezeteknev},{_irodalmi2017.Keresztnev}");
+
+            var milyenDijat = nobeldijasok.Find(x=>x.Keresztnev=="Arthur B." && x.Vezeteknev=="McDonald");
+            var milyenDijat2 = nobeldijasok.FindAll(x => x.Keresztnev == "Arthur B." && x.Vezeteknev == "McDonald");
+            //szervezetek lekérdezése
+            var szervezetek = nobeldijasok.FindAll(x=>x.Vezeteknev=="").OrderBy(x=>x.Ev);
+
+            foreach (var i in szervezetek)
+            {
+                Console.WriteLine($"{i.Ev},{i.Keresztnev},{i.Tipus}");
+            }
+
+
+            if (milyenDijat!=null)
+            {
+                Console.WriteLine($"{milyenDijat.Tipus}");
+            } else
+            {
+                Console.WriteLine("Nincs ilyen adat!");
+                Console.WriteLine(milyenDijat2.Count);
+            }
+            //csoportosítás
+            var tipusok = nobeldijasok.ToLookup(x=>new { x.Ev,x.Tipus });
+
+            foreach (var i in tipusok)
+            {
+                Console.WriteLine($"{i.Key.Ev},{i.Key.Tipus},{i.Count()}");
+            }
+
+            var orvosi = nobeldijasok.FindAll(x=>x.Tipus=="orvosi");
+
+            Console.WriteLine($"{orvosi.Count}");
+
             Console.ReadKey();
         }
     }
