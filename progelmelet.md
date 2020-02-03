@@ -821,3 +821,23 @@ try
                 
             }
 ```
+
+## Struktúra (több egyszerű változót tartalmazó típus) létrehozása
+A struktúrát mindig a főprogramon kívül kell létrehozni. Akár külön fájlban is lehet.
+
+```C#
+ struct Orszag
+        {
+            public string Orszagnev;
+            public string Csatlakozas;
+        }
+```
+Ez a struktúra két string változót tartalmaz.
+
+A struktúrából a főprogramban példányt kell létrehozni, a példányt lehet adatokkal feltölteni, stb.
+
+```C#
+Orszag ausztria = new Orszag();
+ausztria.Orszagnev = "Ausztria";
+ausztria.Csatlakozas = "1995.01.01.";
+```
