@@ -870,3 +870,37 @@ ausztria.Csatlakozas = "1995.01.01.";
                 Console.WriteLine(ex.Message);                
             }
 ```
+## Adatok kiválogatása (L betűvel kezdődő országok) és másik listába helyezése
+```C#
+var lorszagok = orszagok.FindAll(x => x.Orszagnev.StartsWith("L"));
+```
+A FindAll megkeresi az **orszagok** listában a feltételnek megfelelő összes sort, és egy új listába helyezi.
+
+**Az eredménylista fájlba írása**
+
+A fájlba írás nagyon hasonlít a beolvasáshoz, lényegében be kell járni egy ciklussal a kiírni kívánt kollekciót(listát) és a sorait a fájlba írni.
+
+```C#
+//A kiírást is try..catch blokkban végezzük
+try
+            {
+                //Filestream létrehozás            
+                FileStream fajl = new FileStream(@"c:/EU/l_orszagok.txt", FileMode.Create);
+
+                //Kiírásra a StreamWriter-t kell használni, using blokkban
+                using (StreamWriter writer = new StreamWriter(fajl, Encoding.Default))
+                {
+                    foreach (var i in lorszagok)
+                    {
+                        writer.WriteLine($"{i.Orszagnev};{i.Csatlakozas}");
+                    }
+                }
+                
+                Console.WriteLine("Kiírás kész!");
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex);                
+            }
+```
+
