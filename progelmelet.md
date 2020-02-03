@@ -841,3 +841,32 @@ Orszag ausztria = new Orszag();
 ausztria.Orszagnev = "Ausztria";
 ausztria.Csatlakozas = "1995.01.01.";
 ```
+
+## Fájl beolvasás, feldolgozás struktúrába
+```C#
+ List<Orszag> orszagok = new List<Orszag>();
+            Orszag orszag = new Orszag();
+            try
+            {
+                FileStream fajl = new FileStream(@"c:/EU/EUcsatlakozas.txt", FileMode.Open);
+
+                using (StreamReader reader = new StreamReader(fajl,Encoding.UTF7))
+                {
+                    while (!reader.EndOfStream)
+                    {
+                        //Egy sor beolvasása a fájlból,felvágás a ; karakter mentén
+                        //és az eredmény tömbbe rakása
+                        var e = reader.ReadLine().Split(';');
+                                                
+                        orszag.Orszagnev = e[0];
+                        orszag.Csatlakozas = e[1];
+                        orszagok.Add(orszag);
+                    }
+                }
+                
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);                
+            }
+```
