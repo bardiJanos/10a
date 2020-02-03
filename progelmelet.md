@@ -876,7 +876,7 @@ var lorszagok = orszagok.FindAll(x => x.Orszagnev.StartsWith("L"));
 ```
 A FindAll megkeresi az **orszagok** listában a feltételnek megfelelő összes sort, és egy új listába helyezi.
 
-**Az eredménylista fájlba írása**
+## Az eredménylista fájlba írása
 
 A fájlba írás nagyon hasonlít a beolvasáshoz, lényegében be kell járni egy ciklussal a kiírni kívánt kollekciót(listát) és a sorait a fájlba írni.
 
