@@ -904,3 +904,139 @@ try
             }
 ```
 
+# Hiányzások vizsgafeladat megoldása
+
+```C#
+using System;
+using System.Collections.Generic;
+using System.IO;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Hianyzasok
+{
+    class Program
+    {
+        struct Hianyzas
+        {
+            public string nev;
+            public string osztaly;
+            public int elsonap;
+            public int utolsonap;
+            public int mulasztottorak;
+
+            //Konstruktor függvény, ezzel dolgozzuk fel a fájlból
+            //beolvasott sort
+            public Hianyzas(string sor)
+            {
+                var e = sor.Split(';');
+                nev = e[0];
+                osztaly = e[1];
+                elsonap = Convert.ToInt32(e[2]);
+                utolsonap= Convert.ToInt32(e[3]);
+                mulasztottorak= Convert.ToInt32(e[4]);
+            }
+
+
+        }
+
+        static void Main(string[] args)
+        {
+            List<Hianyzas> hianyzasok = new List<Hianyzas>();
+
+            try
+            {
+                var sorok = File.ReadAllLines(@"c:/hianyzasok/szeptember.csv",Encoding.Default);
+                //Az első sor nem kell feldolgozni, ezért a FOR 1-től fut.
+                for (int i = 1; i < sorok.Length; i++)
+                {
+                    //Struktúra példányosítása
+                    Hianyzas hianyzas = new Hianyzas(sorok[i]);
+
+                    //A struktúra hozzáadása a listához
+                    hianyzasok.Add(hianyzas);
+
+                }
+            }
+            catch (Exception ex)
+            {
+
+                Console.WriteLine(ex.Message);
+            }
+
+            Console.WriteLine($"Adatsorok száma:{hianyzasok.Count}");
+
+            //A tanulók összes hiányzása
+            var osszhianyzas = hianyzasok.Sum(x=>x.mulasztottorak);
+
+            Console.WriteLine($"Összes hiányzás:{osszhianyzas}");
+
+            //Bekérés konzolról
+            Console.Write("A tanuló neve:");
+            var tanulonev = Console.ReadLine();
+            Console.Write("Adjon meg egy napot 1 és 30 között:");
+            var nap = Convert.ToInt32(Console.ReadLine());
+
+            //Az Any meg tudja nézni, hogy egy érték szerepel-e az
+            //adatszerkezetben
+            if (hianyzasok.Any(x=>x.nev==tanulonev))
+            {
+                Console.WriteLine("A tanuló hiányzott szeptemberben");
+            } else
+            {
+                Console.WriteLine("A tanuló nem hiányzott szeptemberben");
+            }
+
+            //A bekért napon hiányzó tanulók
+            var hianyzokegynapon = hianyzasok.FindAll(x=>x.elsonap>=nap && x.utolsonap<=nap);
+
+            //Ha van hiányzó, akkor listázzuk, egyébként üzenet
+            if (hianyzokegynapon.Count>0)
+            {
+                foreach (var i in hianyzokegynapon)
+                {
+                    Console.WriteLine($"{i.nev},{i.osztaly}");
+                }
+            } else
+            {
+                Console.WriteLine("Ezen a napon nem hiányzott senki");
+            }
+
+            //Összesítés készítése -> ToLookUp
+
+            var osszesites = hianyzasok.ToLookup(x=>x.osztaly).OrderBy(x=>x.Key);
+
+            //Az összesítés kiíratása
+
+            //Adatmező helyett az összesítés kulcsát kell kiíratni
+            foreach (var i in osszesites)
+            {
+                Console.WriteLine($"{i.Key},{i.Sum(x=>x.mulasztottorak)}");
+            }
+
+            //Fájlba írás a StreamWriter-el
+            try
+            {
+                FileStream fajl = new FileStream(@"c:/hianyzasok/osszegzes.txt", FileMode.Create);
+                using (StreamWriter wr=new StreamWriter(fajl,Encoding.Default))
+                {
+                    foreach (var i in osszesites)
+                    {
+                        wr.WriteLine($"{i.Key},{i.Sum(x => x.mulasztottorak)}");
+                    }
+                }
+                Console.WriteLine("Kiírás kész");
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);                               
+            }
+
+
+
+            Console.ReadKey();
+        }
+    }
+}
+```
