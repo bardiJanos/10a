@@ -24,6 +24,11 @@ A Javascript kód helyet kaphat a weboldalon belül a <SCRIPT></SCRIPT> tageken 
     </BODY>
 </HTML>
 ```
+## Írás a konzolba js programmal
+A Javascript program tud a konzolba is írni, ha arra van szükségünk (hasznos lehet hibakereséskor, vagy változók értékének a követésekor).
+```javascript
+console.log("Hell-o again");
+```
 ## A script-tagek elhelyezése a weboldalba
 ```HTML
 <HTML>
