@@ -49,3 +49,11 @@ A Javascript program tud a konzolba is írni, ha arra van szükségünk (hasznos
 ```javascript
 console.log("Hell-o again");
 ```
+## Változók a JS programban
+
+A js-ben nagyjából ugyanazok a változó típusok használhatóak, mint bármilyen más programban. A változókat a VAR kulcsszó használatával tudjuk létrehozni.
+A változó típusok:
+ - számok (egész vagy törtszámok, a számrendszer lehet decimális,oktális,hexadecimális)
+ - szöveg (literál, vagy objektum)
+ - logikai (TRUE,FALSE)
+ - felsorolási típus 
