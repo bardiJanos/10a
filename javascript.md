@@ -57,3 +57,17 @@ A változó típusok:
  - szöveg (literál, vagy objektum)
  - logikai (TRUE,FALSE)
  - felsorolási típus 
+
+### Szám típusok
+```javascript
+var a=119;
+var b=67.89;
+```
+### Szöveg típus
+Két szöveget a + műveleti jellel össze tudunk fűzni.
+```javascript
+ var szoveg='Valami szöveg';
+ var sz2=' és még valami..'
+           
+ document.writeln(szoveg+sz2);
+```           
