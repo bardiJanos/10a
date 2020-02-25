@@ -24,4 +24,22 @@ A Javascript kód helyet kaphat a weboldalon belül a <SCRIPT></SCRIPT> tageken 
     </BODY>
 </HTML>
 ```
-
+## A script-tagek elhelyezése a weboldalba
+```HTML
+<HTML>
+    <HEAD>
+        <title>
+            Javascript alapok
+        </title>
+       <script>
+           document.write("Hell-o");
+        </script>
+    </HEAD>
+    <BODY>
+        <H1>JS alapok</H1>
+       <script>
+           document.write("<H2>Hell-ooo</H2>");
+        </script>
+    </BODY>
+</HTML>
+```
