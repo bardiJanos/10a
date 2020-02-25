@@ -7,5 +7,7 @@ Felhasználási köre rendkívül széles. Alapvetően azért jött létre, hogy
 
 Számos framework (keretrendszer) alapját is képezi , JQuery, Angular JS, Vue JS, Bootstrap...
 
+A Javascript kód helyet kaphat a weboldalon belül a <SCRIPT></SCRIPT> tageken belül, illetve külön fájlokban is.
+
 
 
