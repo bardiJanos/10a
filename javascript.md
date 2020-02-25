@@ -71,3 +71,7 @@ Két szöveget a + műveleti jellel össze tudunk fűzni.
            
  document.writeln(szoveg+sz2);
 ```           
+### Logikai típus
+```javascript
+var igazsag=true;
+```
