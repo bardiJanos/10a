@@ -9,5 +9,19 @@ Számos framework (keretrendszer) alapját is képezi , JQuery, Angular JS, Vue 
 
 A Javascript kód helyet kaphat a weboldalon belül a <SCRIPT></SCRIPT> tageken belül, illetve külön fájlokban is.
 
-
+## Egy alap html oldal forrása:
+```HTML
+<HTML>
+    <HEAD>
+        <title>
+            Javascript alapok
+        </title>
+       
+    </HEAD>
+    <BODY>
+        <H1>JS alapok</H1>
+       
+    </BODY>
+</HTML>
+```
 
