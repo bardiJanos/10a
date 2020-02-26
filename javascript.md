@@ -75,3 +75,25 @@ Két szöveget a + műveleti jellel össze tudunk fűzni.
 ```javascript
 var igazsag=true;
 ```
+### Tömbök JS-ben
+A tömb alaphelyzetben ugyanúgy működik, mint minden más programozási nyelvben, a tömb elemére az indexével tudunk hivatkozni.
+A tömb elemeinek a megjelenítésére a for ciklust használjuk ugyanúgy, mint C#-ban. A tömb elemeinek kezdőértékét a [] zárójelek között adhajtuk meg.
+```javascript
+<HTML>
+    <HEAD>
+        <TITLE>Javascript alapok 2
+        </TITLE>
+        <SCRIPT>
+            var szamok=[1,26,78,43,39,51];
+            for(i=0;i<szamok.length;i++) {
+                document.write(szamok[i]+" ");
+            }
+            
+        </SCRIPT>
+    </HEAD>
+    <BODY>
+        
+        
+    </BODY>
+</HTML>
+```
