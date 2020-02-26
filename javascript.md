@@ -97,7 +97,7 @@ A tömb elemeinek a megjelenítésére a for ciklust használjuk ugyanúgy, mint
     </BODY>
 </HTML>
 ```
-### Nevek megjelenítése listaként,az <UL> és <LI> HTML tagek felhasználásával
+### Nevek megjelenítése listaként,az //<UL> és //<LI> HTML tagek felhasználásával
 ```javascript
     var nevek=["Ubul","Huba","Zénó","Elek"];
    
