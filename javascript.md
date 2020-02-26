@@ -97,3 +97,15 @@ A tömb elemeinek a megjelenítésére a for ciklust használjuk ugyanúgy, mint
     </BODY>
 </HTML>
 ```
+### Nevek megjelenítése listaként,az <UL> és <LI> HTML tagek felhasználásával
+```javascript
+    var nevek=["Ubul","Huba","Zénó","Elek"];
+   
+   document.write("<UL>")
+   
+    for(i=0;i<nevek.length;i++){
+                document.write("<LI>"+nevek[i]+"</LI>");            
+    }
+   
+   document.write("</UL>")
+```
