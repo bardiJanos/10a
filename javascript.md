@@ -75,6 +75,15 @@ Két szöveget a + műveleti jellel össze tudunk fűzni.
 ```javascript
 var igazsag=true;
 ```
+### Undefined
+Ha egy változót deklarálunk, de nem adunk neki értéket, akkor a változó értékére hivatkozva **undefined** szöveget kapunk.
+
+```javascript
+var nev;
+```
+A **nev** változó értékére hivatkozva **undefined**-et kapnánk.
+
+
 ### Tömbök JS-ben
 A tömb alaphelyzetben ugyanúgy működik, mint minden más programozási nyelvben, a tömb elemére az indexével tudunk hivatkozni.
 A tömb elemeinek a megjelenítésére a for ciklust használjuk ugyanúgy, mint C#-ban. A tömb elemeinek kezdőértékét a [] zárójelek között adhajtuk meg.
