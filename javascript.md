@@ -118,3 +118,24 @@ A tömb elemeinek a megjelenítésére a for ciklust használjuk ugyanúgy, mint
    
    document.write("</UL>")
 ```
+## ALERT és PROMPT
+Az ALERT funkció segítségével szöveges üzenetet tartalmazó ablakot nyithatunk  a böngészőben.
+
+A PROMPT funkció segítségével felhasználói adatot kérhetünk be, amelyet egy változóban eltárolhatunk, később az értékét felhasználhatjuk.
+
+```HTML
+<html>
+    <head>
+        <title>Prompt, alert, függvények</title>
+    </head>
+    <body>
+        <script>
+            var nev=prompt("Add meg a nevedet!:");
+            alert("A megadott név: "+nev);
+            document.write("<H1>Szia "+nev+"</H1>");
+        </script>
+    </body>
+
+</html>
+```
+
