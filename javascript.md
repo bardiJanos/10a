@@ -153,3 +153,21 @@ számmá kell alakítani, ellenkező esetben a program összefűzi őket mint st
             
  </script>
 ```
+## Függvények a JavaScript-ben
+
+Más programnyelvekhez hasonlóan, a JS-ben is használhatunk függvényeket. A függvények lehetnek visszatérési érték nélküliek, vagy visszatérési értékkel rendelkezőek. A visszatérési értékkel rendelkező függvényekben szerepelnie kell a return utasításnak.
+
+```html
+<script>
+      var a=prompt("Adj meg egy számot:");
+      var b=prompt("Adj meg egy másik számot:");
+            
+      function osszead(a,b)
+      {
+          return parseInt(a)+parseInt(b);
+      }
+            
+var osszeg=osszead(a,b);
+    document.write("<P>"+osszeg+"</P>"); 
+</script>
+```
