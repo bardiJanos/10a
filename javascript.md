@@ -139,3 +139,17 @@ A PROMPT funkció segítségével felhasználói adatot kérhetünk be, amelyet 
 </html>
 ```
 
+###Számok bekérése prompt-al, konverzió
+
+Ha szám típusú értékeket akarunk bekérni, akkor a művelet elvégzése előtt a számokat a parseInt, vagy a parseFloat függvényekkel
+számmá kell alakítani, ellenkező esetben a program összefűzi őket mint string típusú adatokat;
+
+```HTML
+ <script>
+     var a=prompt("Adj meg egy számot:");
+     var b=prompt("Adj meg egy másik számot:");
+          
+     document.write("<P>"+(parseInt(a)+parseInt(b))+"</P>"); 
+            
+ </script>
+```
