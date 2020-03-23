@@ -171,3 +171,17 @@ var osszeg=osszead(a,b);
     document.write("<P>"+osszeg+"</P>"); 
 </script>
 ```
+A legegyszerűbb függvény így néz ki JS-ben
+
+```html
+<script>
+    
+    function osszead(){
+        document.write(10+20);    
+    }
+    osszead();
+</script>
+```
+Ne feledjük a függvényt nem elég deklarálni, meg is kell hívni, hogy végrehajtódjon (**osszead()**)
+Azok a függvények, amelyek rendelkeznek visszatérési értékkel (van benne return) azok állhatnak értékadó kifejezés jobb oldalán. 
+
