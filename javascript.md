@@ -185,3 +185,27 @@ A legegyszerűbb függvény így néz ki JS-ben
 Ne feledjük a függvényt nem elég deklarálni, meg is kell hívni, hogy végrehajtódjon (**osszead()**)
 Azok a függvények, amelyek rendelkeznek visszatérési értékkel (van benne return) azok állhatnak értékadó kifejezés jobb oldalán. 
 
+Egyszerű példa: km/h-ban megadott sebesség átalakítása m/s-ra. Készítünk egy egyszerű függvényt, amely a paraméterben megadott km/h értéket átszámítja m/s-ra és ezzel visszatér. Az egyszerűség kedvéért az adatbekérést a **prompt**, a kiírást az **alert** funkciókkal valósítjuk meg.
+
+```html
+<HTML>
+    <HEAD>
+        <TITLE>Függvények, függvények mindenütt!
+        </TITLE>
+        
+    </HEAD>
+    <BODY>
+        <H1>Sebesség átszámítás</H1>
+        <SCRIPT>
+            function kmh2ms(kmh)
+            {
+                return kmh/3.6;
+            }
+            var sebkmh=prompt("A sebesség km/h-ban:");
+            alert("A sebesség: "+kmh2ms(sebkmh)+  "m/s");
+            
+        </SCRIPT>
+    </BODY>
+</HTML>
+```
+
