@@ -208,4 +208,36 @@ Egyszerű példa: km/h-ban megadott sebesség átalakítása m/s-ra. Készítün
     </BODY>
 </HTML>
 ```
+A JavaScript lehetőséget ad arra is, hogy általános függvényeket írjunk, mint pl. az átlag. Ha általános függvényt írunk, akkor nincs paraméterlista. A paramétereket híváskor ,-vel elválasztva adjuk át a függvénynek. Ebben az esetben az **arguments** tömb tartalmazza az átadott paramétereket innen lehet az értéküket kiolvasni. 
 
+Erre példa a következő:
+
+```HTML
+<HTML>
+    <HEAD>
+        <TITLE>Függvények, függvények mindenütt!
+        </TITLE>
+        
+    </HEAD>
+    <BODY>
+        <H1>Általános függvények</H1>
+        <SCRIPT>
+            
+                        
+            function atlag()
+            {
+                var osszeg=0;
+                for(i=0;i<arguments.length;i++){
+                    osszeg=osszeg+arguments[i];
+                }
+                return osszeg/arguments.length;
+            }
+            
+            document.writeln(atlag(10,20,30));
+            document.writeln(atlag(20,40));
+            document.writeln(atlag(40,58,79,86,113,221));
+            
+        </SCRIPT>
+    </BODY>
+</HTML>
+```
