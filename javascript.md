@@ -311,4 +311,6 @@ Készítsünk egy scriptet, ami eléri és módosítja ennek a bekezdésnek a ta
 	szoveg.innerHTML="DOM";
 </SCRIPT>
 ```
+Látható, hogy az elem a **szoveg** nevű változóba kerül, majd az **innerHTML** tulajdonság értékét módosítjuk (azaz a kiválasztott elem tartalmát).
+
 
