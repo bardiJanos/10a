@@ -270,4 +270,6 @@ A DOM egy nyelv és platformfüggetlen objektummodell, amely többek között a 
 </html>
 ```
 Belátható, hogy ha ez a fájl mondjuk ***lista.html*** néven van valahol elmentve fájlként, akkor ezt a fájlt felfoghatjuk a **document**-nek. A **\<HTML>..\</HTML>** elem szülő lesz, hiszen az összes többi elemet ez tartalmazza. 
-A **\<HEAD>..\</HEAD>** elem egyrészt gyerek elem lesz, hiszen ez  a \<HTML> elem gyereke, viszont a \<TITLE> szempontjából szülő elem. A \<BODY> elem a \<HTML> elem gyereke, viszont pl. szülője a \<H1> elemnek.
+A **\<HEAD>..\</HEAD>** elem egyrészt gyerek elem lesz, hiszen ez  a **\<HTML>** elem gyereke, viszont a **\<TITLE>** szempontjából szülő elem. A **\<BODY>** elem a **\<HTML>** elem gyereke, viszont pl. szülője a **\<H1>** elemnek.
+
+
