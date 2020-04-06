@@ -315,5 +315,20 @@ Látható, hogy az elem a **szoveg** nevű változóba kerül, majd az **innerHT
 
 ### Elérés az elem neve alapján
 
-Nézzük meg, hogy a Címsor1 elem tartalmát hogyan lehetne elérni. Itt nincsen Id, tehát Id alapján nem tudjuk elérni, csak az elem neve (**H1**) alapján.
+Nézzük meg, hogy a Címsor1 elem tartalmát hogyan lehetne elérni. Itt nincsen Id, tehát Id alapján nem tudjuk elérni, csak az elem neve (**H1**) alapján. Az előző példát folytatva: 
 
+```HTML
+<SCRIPT>
+	var szoveg=document.getElementById("bekezdes");	            
+	szoveg.innerHTML="DOM";
+	
+	var cimsor=document.getElementsByTagName("H1");
+	cimsor[0].innerHTML="DOM";	
+</SCRIPT>
+```
+Itt eredményként egy tömböt kapunk vissza. A **cimsor** nevű változó tehát most egy olyan tömb amelynek 1 eleme van. 
+
+Mi a helyzet, ha több elem van? Nézzük a lista elemeit. Ezek most számok 1-től 5-ig. Szorozzuk meg a lista elemeit 2-vel!
+
+```HTML
+```
