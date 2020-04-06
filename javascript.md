@@ -303,7 +303,7 @@ Az elemekről megállapíthatóak hogy mely elemeknek a szülöi, gyermekei, van
 
 Először nézzük az elérést id alapján. A HTML szabályai szerint az id egy egyedi azonosító, és nincs a dokumentumban két egyforma id, ezért az id mindig ***egy*** adott elemet jelent. A példában van egy \<P> elem (ami egy szöveges bekezdés), ehhez tartozik egy id, aminek értéke **"bekezdes"**.
 
-Készítsünk egy scriptet, ami eléri és módosítja ennek a bekezdésnek a tartalmát:
+### Készítsünk egy scriptet, ami eléri és módosítja ennek a bekezdésnek a tartalmát:
 
 ```HTML
 <SCRIPT>
@@ -313,4 +313,7 @@ Készítsünk egy scriptet, ami eléri és módosítja ennek a bekezdésnek a ta
 ```
 Látható, hogy az elem a **szoveg** nevű változóba kerül, majd az **innerHTML** tulajdonság értékét módosítjuk (azaz a kiválasztott elem tartalmát).
 
+### Elérés az elem neve alapján
+
+Nézzük meg, hogy a Címsor1 elem tartalmát hogyan lehetne elérni. Itt nincsen Id, tehát Id alapján nem tudjuk elérni, csak az elem neve (**H1**) alapján.
 
