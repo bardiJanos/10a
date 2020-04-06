@@ -244,3 +244,29 @@ Erre példa a következő:
 # A DOM (Document Object Model)
 
 A DOM egy nyelv és platformfüggetlen objektummodell, amely többek között a HTML, XHTML, XML és velük rokon nyelvek szerkezetét, és az objektumaikkal kapcsolatos műveleteket, interakciókat modellezi. A DOM egymással szülő-gyerek kapcsolatban álló objektumok rendszere. A dokumentum valamennyi összetevőjét, valamint tartalmát magában foglalja.
+
+## Nézzünk egy egyszerű weboldalt
+
+```html
+	<html>
+	    <head>
+	        <title>
+	            Document Object Model(DOM)
+	        </title>
+	    </head>
+	    <body>
+	        <H1>Document Object Model</H1>
+	        <P id="bekezdes">Bekezdés</P>
+	        <UL>
+	            <LI>1</LI>
+	            <LI>2</LI>
+	            <LI>3</LI>
+	            <LI>4</LI>
+	            <LI>5</LI>
+	        </UL>
+	        	    
+	    </body>
+	
+	</html>
+```
+
