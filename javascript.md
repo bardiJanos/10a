@@ -318,7 +318,7 @@ Látható, hogy az elem a **szoveg** nevű változóba kerül, majd az **innerHT
 Nézzük meg, hogy a Címsor1 elem tartalmát hogyan lehetne elérni. Itt nincsen Id, tehát Id alapján nem tudjuk elérni, csak az elem neve (**H1**) alapján. Az előző példát folytatva: 
 
 ```HTML
-<SCRIPT>
+<<SCRIPT>
 	var szoveg=document.getElementById("bekezdes");	            
 	szoveg.innerHTML="DOM";
 	
@@ -331,4 +331,20 @@ Itt eredményként egy tömböt kapunk vissza. A **cimsor** nevű változó teh�
 Mi a helyzet, ha több elem van? Nézzük a lista elemeit. Ezek most számok 1-től 5-ig. Szorozzuk meg a lista elemeit 2-vel!
 
 ```HTML
+<<SCRIPT>
+        var szoveg=document.getElementById("bekezdes");             
+        szoveg.innerHTML="DOM";        
+
+        var cimsor=document.getElementsByTagName("H1");
+        cimsor[0].innerHTML="DOM";      
+
+	 var elemek=document.getElementsByTagName("LI");
+
+	 for(i=0;i<elemek.length;i++){
+	         elemek[i].innerHTML=parseInt(elemek[i].innerHTML)*2;               
+	 }
+
+
+</SCRIPT>
 ```
+Itt is egy tömböt kapunk az elemek változóban. Ezen kell végig menni a for ciklussal. Az elemeket számként értelmezzük a parseInt paranccsal, így a művelet a kívánt eredményt fogja adni.
