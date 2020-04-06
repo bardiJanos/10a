@@ -303,5 +303,12 @@ Az elemekről megállapíthatóak hogy mely elemeknek a szülöi, gyermekei, van
 
 Először nézzük az elérést id alapján. A HTML szabályai szerint az id egy egyedi azonosító, és nincs a dokumentumban két egyforma id, ezért az id mindig ***egy*** adott elemet jelent. A példában van egy \<P> elem (ami egy szöveges bekezdés), ehhez tartozik egy id, aminek értéke **"bekezdes"**.
 
+Készítsünk egy scriptet, ami eléri és módosítja ennek a bekezdésnek a tartalmát:
 
+```HTML
+<SCRIPT>
+	var szoveg=document.getElementById("bekezdes");	            
+	szoveg.innerHTML="DOM";
+</SCRIPT>
+```
 
