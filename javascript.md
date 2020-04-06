@@ -288,5 +288,16 @@ Alapvetően három módon érhetünk el elemeket:
  - Az elem neve alapján a **document.getElementsByTagName(nev)**
  - Stílusa alapján a **document.getElementsByClassName(class)**; 
 
+Az elemekről megállapíthatóak hogy mely elemeknek a szülöi, gyermekei, vannak-e gyerek elemeik stb.
+r
+ - **element.childNodes** az elem gyerek elemeit adja vissza egy tömbben
+ - **element.firstChild** az első gyerek elemet adja vissza
+ - **element.lastChild** az utolsó gyerek elemet adja vissza
+ - **element.hasChildNodes** logikai értéket ad vissza, ha van gyereke az elemnek, akkor TRUE
+ - **element.nextSibling** a következő elem ugyanazon a szinten, pl. a következő listaelem
+ - **element.previousSibling** az előző elem ugyanazon a szinten
+ - **element.parentNode** a szülő elemet adja vissza
+ 
+ 
 
 
