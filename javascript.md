@@ -272,4 +272,21 @@ A DOM egy nyelv és platformfüggetlen objektummodell, amely többek között a 
 Belátható, hogy ha ez a fájl mondjuk ***lista.html*** néven van valahol elmentve fájlként, akkor ezt a fájlt felfoghatjuk a **document**-nek. A **\<HTML>..\</HTML>** elem szülő lesz, hiszen az összes többi elemet ez tartalmazza. 
 A **\<HEAD>..\</HEAD>** elem egyrészt gyerek elem lesz, hiszen ez  a **\<HTML>** elem gyereke, viszont a **\<TITLE>** szempontjából szülő elem. A **\<BODY>** elem a **\<HTML>** elem gyereke, viszont pl. szülője a **\<H1>** elemnek.
 
+Az egyes elemeknek lehetnek tulajdonságaik, más néven attribútumaik. Ismerjük az **\<IMG>** elemet, amely kép beszúrására szolgál. 
+Például:
+```HTML
+<IMG SRC="light.jpg">
+```
+Az **SRC** az **\<IMG>** elem paramétere, és megadja a megjelenítendő kép elérési útját.
+
+A JavaScript nyelv segítségével ezt a DOM modellt manipulálhatjuk. Lekérdezhetünk elemeket, megváltoztathatjuk a paramétereiket, tartalmukat. Hozzáadhatunk új elemeket, törölhetünk elemeket.
+
+## Elemek elérése
+
+Alapvetően három módon érhetünk el elemeket:
+ - id alapján a **document.getElementById(id)** utasítással.
+ - Az elem neve alapján a **document.getElementsByTagName(nev)**
+ - Stílusa alapján a **document.getElementsByClassName(class)**; 
+
+
 
