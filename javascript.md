@@ -248,8 +248,8 @@ A DOM egy nyelv és platformfüggetlen objektummodell, amely többek között a 
 ## Nézzünk egy egyszerű weboldalt
 
 ```html
-	<html>
-	    <head>
+<html>
+	<head>
 	        <title>
 	            Document Object Model(DOM)
 	        </title>
@@ -267,6 +267,6 @@ A DOM egy nyelv és platformfüggetlen objektummodell, amely többek között a 
 	        	    
 	    </body>
 	
-	</html>
+</html>
 ```
 
