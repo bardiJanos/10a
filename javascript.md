@@ -289,7 +289,7 @@ Alapvetően három módon érhetünk el elemeket:
  - Stílusa alapján a **document.getElementsByClassName(class)**; 
 
 Az elemekről megállapíthatóak hogy mely elemeknek a szülöi, gyermekei, vannak-e gyerek elemeik stb.
-r
+
  - **element.childNodes** az elem gyerek elemeit adja vissza egy tömbben
  - **element.firstChild** az első gyerek elemet adja vissza
  - **element.lastChild** az utolsó gyerek elemet adja vissza
@@ -299,5 +299,9 @@ r
  - **element.parentNode** a szülő elemet adja vissza
  
  
+## Elemek elérése, módosítása
+
+Először nézzük az elérést id alapján. A HTML szabályai szerint az id egy egyedi azonosító, és nincs a dokumentumban két egyforma id, ezért az id mindig ***egy*** adott elemet jelent. A példában van egy \<P> elem (ami egy szöveges bekezdés), ehhez tartozik egy id, aminek értéke **"bekezdes"**.
+
 
 
