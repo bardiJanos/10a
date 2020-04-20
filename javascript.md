@@ -355,6 +355,23 @@ Itt is egy tömböt kapunk az elemek változóban. Ezen kell végig menni a for 
 Bármikor tudunk a Javascriptben új elemeket létrehozni, erre a **document.createElement()**  parancs szolgál. A zárójelek közé azt az elemet kell beírnunk, amilyet létre akarunk hozni.
 Például: 
 ```js
-document.createElement("p");
+var bekezdes=document.createElement("p");
 ```
 A fenti parancs egy bekezdést **\<P>..\</P>** fog létrehozni.
+Az új elemnek adhatunk valami tartalmat, mondjuk egy szöveget:
+```js
+bekezdes.innerHTML="Ez egy bekezdés";
+```
+Az elem egyenlőre nem jelenik meg a weboldalban, hiszen nincs hozzárendelve egyenlőre a weboldal egyik eleméhez sem. 
+
+Tegyük fel, hogy a weboldalban létezik a következő elem:
+```html
+<DIV id=szovegek>
+</DIV>
+```
+Ezt az elemet el tudjuk érni, és hozzá tudjuk adni az előbb létrehozott elemet:
+```js
+var szovegek=document.getElementById("szovegek");
+szovegek.appentChild(bekezdes);
+```
+
