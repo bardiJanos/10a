@@ -404,10 +404,12 @@ Adjunk hozzá egy harmadik bekezdést, majd töröljük az elsőt!
 A script a következő:
 
 ```js
+<SCRIPT>
 var adatok=document.getElementById("adatok");
 var elso=document.getElementById("elso");
 var harmadik=document.createElement("p");
 harmadik.innerHTML="Harmadik bekezdés";
 adatok.removeChild(elso);
 adatok.appendChild(harmadik);
+</SCRIPT>
 ```
