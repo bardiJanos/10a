@@ -415,7 +415,6 @@ adatok.appendChild(harmadik);
 
 ```HTML
 <DIV id=adatok>
-        <P id=elso>Első adat</P>
         <P id=masodik>Második adat</P>
 	<P>Harmadik bekezdés</P>
 </DIV>  
