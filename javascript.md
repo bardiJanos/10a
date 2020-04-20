@@ -374,4 +374,12 @@ Ezt az elemet el tudjuk érni, és hozzá tudjuk adni az előbb létrehozott ele
 var szovegek=document.getElementById("szovegek");
 szovegek.appentChild(bekezdes);
 ```
+A **\<DIV>** elem most így néz ki:
 
+```html
+<DIV id=szovegek>
+	<P>Ez egy bekezdés</P>
+</DIV>
+```
+
+Látható, hogy a \<P> a \<DIV> gyerek eleme. A \<P> szempontjából a \<DIV> szülő elem.
