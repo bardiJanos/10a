@@ -350,7 +350,7 @@ Mi a helyzet, ha több elem van? Nézzük a lista elemeit. Ezek most számok 1-t
 ```
 Itt is egy tömböt kapunk az elemek változóban. Ezen kell végig menni a for ciklussal. Az elemeket számként értelmezzük a parseInt paranccsal, így a művelet a kívánt eredményt fogja adni.
 
-## Elemek létrehozása (2020.04.20.)
+## Elemek létrehozása,törlése (2020.04.20.)
 
 Bármikor tudunk a Javascriptben új elemeket létrehozni, erre a **document.createElement()**  parancs szolgál. A zárójelek közé azt az elemet kell beírnunk, amilyet létre akarunk hozni.
 Például: 
