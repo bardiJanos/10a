@@ -383,3 +383,9 @@ A **\<DIV>** elem most így néz ki:
 ```
 
 Látható, hogy a \<P> a \<DIV> gyerek eleme. A \<P> szempontjából a \<DIV> szülő elem.
+
+Ha el akarjuk távolítani az előbb hozzáadott elemet akkor az a következő módon lehetséges:
+```js
+szovegek.removeChild(bekezdes);
+```
+
