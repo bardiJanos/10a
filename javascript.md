@@ -389,3 +389,15 @@ Ha el akarjuk távolítani az előbb hozzáadott elemet akkor az a következő m
 szovegek.removeChild(bekezdes);
 ```
 
+### Példa
+
+Adott egy HTML fájl részlete:
+
+```html
+<DIV id=adatok>
+	<P id=elso>Első adat</P>
+	<P id=masodik>Második adat</P>
+</DIV>	
+```
+Adjunk hozzá egy harmadik bekezdést, majd töröljük az elsőt!
+
