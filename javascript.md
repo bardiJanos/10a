@@ -401,15 +401,22 @@ Adott egy HTML fájl részlete:
 ```
 Adjunk hozzá egy harmadik bekezdést, majd töröljük az elsőt!
 
-A script a következő:
+A \<script>..\</script> tag-be a következő utasítások kerülnének:
 
 ```js
-<SCRIPT>
 var adatok=document.getElementById("adatok");
 var elso=document.getElementById("elso");
 var harmadik=document.createElement("p");
 harmadik.innerHTML="Harmadik bekezdés";
 adatok.removeChild(elso);
 adatok.appendChild(harmadik);
-</SCRIPT>
+```
+**Az eredmény:**
+
+```HTML
+<DIV id=adatok>
+        <P id=elso>Első adat</P>
+        <P id=masodik>Második adat</P>
+	<P>Harmadik bekezdés</P>
+</DIV>  
 ```
