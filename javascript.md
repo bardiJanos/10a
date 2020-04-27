@@ -452,3 +452,16 @@ A címsor 1 alatt egy kép van beszúrva, ennél az elemnél 4db paramétert sz�
 
 A \<SCRIPT> elembe a következőket írjuk:
 
+```js
+var kep=document.getElementById("kep");    
+```
+Ezzel a kep változóba került a kep id-val megjelölt elem bekerül.
+
+Hogyan tudjuk megmondani, hogy hány db attribútuma van az elemnek?
+
+```js
+var attribs=document.getElementById("kep").attributes.length;
+Console.log(attribs);
+```
+A konzolt megnyitva láthatjuk, hogy az érték 4
+
