@@ -486,4 +486,5 @@ Az attribútumok értéke módosítható is
 kep.width=240;
 kep.heidht=240;
 ```
+Az attribútumok manipulálásával sok mindent lehet kezdeni. Kicserélhetjük a képet, megváltoztathatjuk a szélességét, magasságát, egy elem stílusát megváltoztathatjuk, stb.
 
