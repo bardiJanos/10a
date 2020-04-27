@@ -419,3 +419,5 @@ adatok.appendChild(harmadik);
 	<P>Harmadik bekezdés</P>
 </DIV>  
 ```
+## Az elemek paraméterei (attribútumai). Elérésük, módosításuk (2020.04.27)
+
