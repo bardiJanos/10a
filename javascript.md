@@ -474,3 +474,16 @@ Az attribútumokat a megadás sorrendjáben lehet elérni, a számozás termész
 console.log(kep.attributes[0].name);
 console.log(kep.attributes[0].value);
 ```
+Az attribútumok elérhetőek közvetlenebb módon is (a nevük alapján).
+
+```js
+console.log(kep.src);
+```
+
+Az attribútumok értéke módosítható is
+
+```js
+kep.width=240;
+kep.heidht=240;
+```
+
