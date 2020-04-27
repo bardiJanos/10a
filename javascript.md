@@ -444,3 +444,9 @@ Nézzük a következő HTML dokumentumot:
 </HTML>
 
 ```
+A \<H1> elemben egyetlen paramétert láthatunk, aminek a neve **id**, az értéke(**value**) ***nev***
+
+A címsor 1 alatt egy kép van beszúrva, ennél az elemnél 4db paramétert számolhatunk össze, ezek: **id,src,width,height**
+
+
+
