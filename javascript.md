@@ -465,3 +465,12 @@ Console.log(attribs);
 ```
 A konzolt megnyitva láthatjuk, hogy az érték 4
 
+**Hogyan tudjuk elérni az egyes attribútumokat?**
+
+Az attribútumokat a megadás sorrendjáben lehet elérni, a számozás természetesen 0-val indul. 
+Írassuk konzolra az első elem nevét, és értékét!
+
+```js
+console.log(kep.attributes[0].name);
+console.log(kep.attributes[0].value);
+```
