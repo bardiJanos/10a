@@ -421,3 +421,26 @@ adatok.appendChild(harmadik);
 ```
 ## Az elemek paraméterei (attribútumai). Elérésük, módosításuk (2020.04.27)
 
+A HTML elemek számos paramétert tartalmazhatnak, melyek elérhetőek manipulálhatóak Javascript-ből is természetesen.
+
+Nézzük a következő HTML dokumentumot:
+```HTML
+<HTML>
+    <HEAD>
+        <meta lang="hu" charset="utf-8">
+        <TITLE>Attribútumok
+        </TITLE>
+       
+    </HEAD>
+    <BODY>
+    <H1 id="nev">Attribútumok</H1>
+	    
+        <img id="kep" src="tesztkerdesek.png" width="120" height="120">         
+	    
+	    
+        <script>
+        </script
+    </BODY>
+</HTML>
+
+```
