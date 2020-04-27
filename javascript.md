@@ -448,5 +448,7 @@ A \<H1> elemben egyetlen paramétert láthatunk, aminek a neve **id**, az érté
 
 A címsor 1 alatt egy kép van beszúrva, ennél az elemnél 4db paramétert számolhatunk össze, ezek: **id,src,width,height**
 
+**Hogyan lehet ezeket az attribútumokat JS programból elérni, módosítani?**
 
+A \<SCRIPT> elembe a következőket írjuk:
 
