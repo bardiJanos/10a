@@ -490,7 +490,7 @@ Az attribútumok manipulálásával sok mindent lehet kezdeni. Kicserélhetjük 
 
 ## Mintafeladat elemek elérésére, attribútumok módosítására (2020.05.04.)
 
-
+A feladathoz való képek : [kapcsolo_be](kapcsolo_be.png)
 
 A korábbi alkalommal is láttunk példát HTML elemek elérésére és módosítására. Nem csak az elem tartalma, hanem az elem paraméterei is elérhetőek, módosíthatóak.
 
