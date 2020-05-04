@@ -500,7 +500,7 @@ Az egyes állapotok megjelenítésére képfájlokat használunk (kapcsolo_be.pn
 
 A feladatot egy JavaScript függvény segítségével fogjuk megoldani.
 
-Először a html fájlt kell elkészíteni a neve legyen **light.html**. Egy táblázatba kerül a két kép, egymás alá, középre igazítva.
+Először a html fájlt kell elkészíteni a neve legyen **lampa.html**. Egy táblázatba kerül a két kép, egymás alá, középre igazítva.
 
 Tartalma a következő legyen:
 
